@@ -17,11 +17,17 @@
     }
 
 
+
+
     render(){
       return (
         <div>
+
+        <form onSubmit={this.handleSubmit}>
           <input type="text" onChange={this.handleInput}/>
-          <button onClick={ this.handleSubmit }>Search Movies</button>
+          <input type="submit" value="Search Movies" />
+        </form>
+
 
       </div>
       );
