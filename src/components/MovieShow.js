@@ -1,0 +1,50 @@
+  import React from 'react';
+  import axios from 'axios';
+
+  const BASE_URL = `https://api.themoviedb.org/3/movie/`;
+
+
+  class MovieShow extends React.Component {
+
+    state = {
+      movie: {},
+    }
+
+    componentDidMount() {
+
+      axios.get(BASE_URL + this.props.match.params.id + '?api_key=24d863d54c86392e6e1df55b9a328755')
+      .then( res => {
+
+        console.log('response:', res.data);
+        this.setState({ movie: res.data})
+      })
+      .catch( err => {
+        console.warn('ERROR:', err );
+      });
+    } //componentDidMount()
+
+    render() {
+
+      const movie = this.state.movie;
+
+      return (
+        <div>
+          {
+            movie.id
+            ?
+            <div>
+              <img src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}/>
+              <h1>{`Title: ${movie.original_title}`}</h1>
+              <h3>{ `Overview: ${movie.overview}`}</h3>
+              <h3>{`Vote Average: ${movie.vote_average}`}</h3>
+            </div>
+            :
+            <p>loading...</p>
+          }
+        </div>
+      );
+    }
+
+  }
+
+  export default MovieShow;

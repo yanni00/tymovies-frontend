@@ -14,9 +14,15 @@
   import About from './About';
   import Search from './Search';
   import SearchForm from './SearchForm';
+  import MovieShow from './MovieShow';
+  import TrendingMovies from './TrendingMovies';
 
 
   class Home extends React.Component {
+
+    componentDidMount(){
+      // https://api.themoviedb.org/3/trending/all/week?api_key=24d863d54c86392e6e1df55b9a328755
+    }
 
     render(){
       return(
@@ -33,26 +39,19 @@
 
             <Route exact path="/home" component={ Home }/>
             <Route path="/" component={ SearchForm }/>
-
             <Route exact path="/search/:query" component={ Search }/>
+            <Route exact path="/movies/:id" component={ MovieShow }/>
             <Route exact path="/login" component={ Login } />
             <Route exact path="/registration" component={ Registration } />
             <Route exact path="/genres" component={ Genres } />
             <Route exact path="/about" component={ About } />
+
+            // <Route exact path="/" component={ TrendingMovies }/>
           </Router>
 
-          <img src='https://image.tmdb.org/t/p/w300/z7FCF54Jvzv9Anxyf82QeqFXXOO.jpg'/>
-          <img src='https://image.tmdb.org/t/p/w300/y95lQLnuNKdPAzw9F9Ab8kJ80c3.jpg'/>
-          <img src='https://image.tmdb.org/t/p/w300/db32LaOibwEliAmSL2jjDF6oDdj.jpg'/>
-          <img src='https://image.tmdb.org/t/p/w300/xxLdm3J8WiPLePIEa1ZfmLcMETT.jpg'/>
-          <img src='https://image.tmdb.org/t/p/w300/jyw8VKYEiM1UDzPB7NsisUgBeJ8.jpg'/>
-          <img src='https://image.tmdb.org/t/p/w300/iZf0KyrE25z1sage4SYFLCCrMi9.jpg'/>
-          <img src='https://image.tmdb.org/t/p/w300/gbPfvwBqbiHpQkYZQvVwB6MVauV.jpg'/>
-          <img src='https://image.tmdb.org/t/p/w300/vsmekQlXbUbjSES2Rt7W2i29NIx.jpg'/>
-          <img src='https://image.tmdb.org/t/p/w300/vd6w8M7ixwPHmiVauphyGVjkflA.jpg'/>
-          <img src='https://image.tmdb.org/t/p/w300/df8kJTrVImRiWz2G1WiFiVxwBfn.jpg'/>
-          <img src='https://image.tmdb.org/t/p/w300/lETNNUshBgoeFbw91fzdulIernh.jpg'/>
-          <img src='https://image.tmdb.org/t/p/w300/9hd5th0fvFmAwkVOntWG4cilmSk.jpg'/>
+          {
+            // see Search results component: map over trending movies in state
+          }
 
           <footer>
             &copy; tymovies 2020
