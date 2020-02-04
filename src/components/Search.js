@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-const BASE_URL = 'http://www.omdbapi.com/?apikey=2a3ff8e7&';
+const BASE_URL = 'https://api.themoviedb.org/3/search/movie?api_key=24d863d54c86392e6e1df55b9a328755&';
 
 class Search extends React.Component {
 
@@ -10,7 +10,7 @@ class Search extends React.Component {
   }
 
   componentDidMount() {
-    console.log('working from the search comp')
+    // console.log('working from the search comp')
 
     const movieTitle = this.props.match.params.query.toLowerCase();
     // this.setState({ movieTitle: movieTitle})
@@ -26,10 +26,10 @@ class Search extends React.Component {
 
 
   componentDidUpdate(prevProps) {
-  // Typical usage (don't forget to compare props):
+
   if (this.props.match.params.query !== prevProps.match.params.query) {
-    // this.fetchData(this.props.userID);
-    console.log('there has been a change!!!')
+
+    // console.log('there has been a change!!!')
     const movieTitle = this.props.match.params.query.toLowerCase();
     this.makeAPICall( movieTitle )
   }
@@ -40,17 +40,18 @@ class Search extends React.Component {
 
     // This is where we make our Axios call
 
-    const movieParams = `http://www.omdbapi.com/?apikey=2a3ff8e7&s=${title}`
+    const movieParams = `https://api.themoviedb.org/3/search/movie?api_key=24d863d54c86392e6e1df55b9a328755&query=${title}`
+
 
     axios.get(movieParams)
     .then( res => {
-      console.log('response:', res.data.Search);
-      const movieData = res.data.Search;
+      console.log('response:', res.data.results);
+      const movieData = res.data.results;
 
       if(movieData === undefined){
         console.log('YOU HAVE UNDEFINED MOVIE DATA')
       } else {
-        this.setState({ movies: res.data.Search})
+        this.setState({ movies: res.data.results})
       }
 
     })
@@ -71,18 +72,25 @@ class Search extends React.Component {
         {
           this.state.movies.length >= 1
           ?
+
           <ul>
           {
-            this.state.movies.map( movie => (
+            this.state.movies.map( movie =>   (
                <li key={movie.name}>
-               {movie.Title} ({movie.Year})
+               {movie.title} ({movie.release_date})
+               <br/>
+               <br/>
+               <img src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}/>
                </li>
+
             ))
           }
           </ul>
           :
-          <p>Cannot find your search</p>
+          <p>Loading...Please wait</p>
         }
+
+
 
       </div>
     );
