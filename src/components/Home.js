@@ -41,6 +41,18 @@
             <Route exact path="/about" component={ About } />
           </Router>
 
+          <img src='https://image.tmdb.org/t/p/w300/z7FCF54Jvzv9Anxyf82QeqFXXOO.jpg'/>
+          <img src='https://image.tmdb.org/t/p/w300/y95lQLnuNKdPAzw9F9Ab8kJ80c3.jpg'/>
+          <img src='https://image.tmdb.org/t/p/w300/db32LaOibwEliAmSL2jjDF6oDdj.jpg'/>
+          <img src='https://image.tmdb.org/t/p/w300/xxLdm3J8WiPLePIEa1ZfmLcMETT.jpg'/>
+          <img src='https://image.tmdb.org/t/p/w300/jyw8VKYEiM1UDzPB7NsisUgBeJ8.jpg'/>
+          <img src='https://image.tmdb.org/t/p/w300/iZf0KyrE25z1sage4SYFLCCrMi9.jpg'/>
+          <img src='https://image.tmdb.org/t/p/w300/gbPfvwBqbiHpQkYZQvVwB6MVauV.jpg'/>
+          <img src='https://image.tmdb.org/t/p/w300/vsmekQlXbUbjSES2Rt7W2i29NIx.jpg'/>
+          <img src='https://image.tmdb.org/t/p/w300/vd6w8M7ixwPHmiVauphyGVjkflA.jpg'/>
+          <img src='https://image.tmdb.org/t/p/w300/df8kJTrVImRiWz2G1WiFiVxwBfn.jpg'/>
+          <img src='https://image.tmdb.org/t/p/w300/lETNNUshBgoeFbw91fzdulIernh.jpg'/>
+          <img src='https://image.tmdb.org/t/p/w300/9hd5th0fvFmAwkVOntWG4cilmSk.jpg'/>
 
           <footer>
             &copy; tymovies 2020

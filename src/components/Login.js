@@ -20,8 +20,8 @@ class Login extends Component {
     this.setState({ password: event.target.value });
   }
 
-  login = (userName, pwd) => {
-    axios.post(URL_USER, {name: userName, password: pwd})
+  login = (userEmail, pwd) => {
+    axios.post(URL_USER, {name: userEmail, password: pwd})
     .then( res => {
       console.log(res);
       this.setState({ logged_in: res })
