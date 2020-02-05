@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-      "npm": "6.13.4",
-      "node": "13.5.0"
-    },
+    "npm": "6.13.4",
+    "node": "13.5.0"
+  },
   "homepage": "https://github.com/yanni00/tymovies-frontend.git",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",

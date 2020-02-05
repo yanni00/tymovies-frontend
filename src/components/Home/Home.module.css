@@ -12,5 +12,12 @@ html {
 }
 
 .header {
-  color:white;
+  color: white;
+  text-align: center;
+}
+
+ .home, .login, .signUp, .genres, .about {
+  color: white;
+  text-align: center;
+  text-decoration: none;
 }

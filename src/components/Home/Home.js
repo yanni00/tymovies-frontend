@@ -25,12 +25,12 @@
         <div >
           <h1 className={styles.header}>Ty Movies</h1>
           <Router>
-            <nav>
-              <Link to="/">Home</Link> | &nbsp;
-              <Link to="/login">Login</Link> | &nbsp;
-              <Link to="/registration">Sign Up</Link> | &nbsp;
-              <Link to="/genres">Genres</Link> | &nbsp;
-              <Link to="/about">About Us</Link> | &nbsp;
+            <nav className={styles.nav}>
+              <Link className={styles.home} to="/">Home</Link> |
+              <Link className={styles.login}to="/login">Login</Link> |
+              <Link className={styles.signUp}to="/registration">Sign Up</Link> |
+              <Link className={styles.genres}to="/genres">Genres</Link> |
+              <Link className={styles.about}to="/about">About Us</Link> |
             </nav>
 
 
@@ -44,10 +44,6 @@
 
             <Route exact path="/" component={ TrendingMovies }/>
           </Router>
-
-          {
-            // see Search results component: map over trending movies in state
-          }
 
           <footer>
             &copy; tymovies 2020
