@@ -1,1 +1,8 @@
-cursor: pointer;
+.loginBoxBorder{
+  background-color: lavender;
+  width: 25vw;
+  text-align: center;
+  padding: 1px 0px 3px 0px;
+  border-radius: 5px;
+  margin-left: 37vw;
+}

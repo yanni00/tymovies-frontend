@@ -47,19 +47,12 @@
     render(){
 
       return(
-        <div >
+        <div>
           <h1 className={styles.header}>Ty Movies</h1>
           <Router>
             <nav className={styles.nav}>
               <Link className={styles.home} to="/">Home</Link> |
-                {
-                  this.state.loggedIn
-                  ?
-                  <a className={styles.login} onClick={this.handleLogout}>Logout</a>
-                  :
-                  <Link className={styles.login}to="/login">Login</Link>
-                }
-                |
+              <Link className={styles.login}to="/login">Login</Link> |
               <Link className={styles.signUp}to="/registration">Sign Up</Link> |
               <Link className={styles.genres}to="/genres">Genres</Link> |
               <Link className={styles.about}to="/about">About Us</Link> |

@@ -1,18 +1,11 @@
 html {
-
-
-
-  background-image: linear-gradient(-180deg, #000000, #777B7E, #000000);
-
-  -webkit-background-size: cover;
+   background-image: linear-gradient(-180deg, #000000, #777B7E, #000000);
+   -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;
    background-size: cover;
-}
-
-html {
-  width: 100%;
-  height: 100%;
+   width: 100%;
+   height: 100%;
 }
 
 .header {
@@ -34,4 +27,21 @@ a, a:active, a:hover{
   color: #ffbe00;
   text-decoration: none;
 
+}
+
+footer{
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  margin-left: 0px;
+  background-image: linear-gradient(90deg, #43799c, #777b7e);
+}
+
+#loginBoxBorder{
+  background-color: lavender;
+  width: 25vw;
+  text-align: center;
+  padding: 1px 0px 3px 0px;
+  border-radius: 5px;
 }

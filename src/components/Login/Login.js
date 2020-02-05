@@ -60,17 +60,19 @@ class Login extends Component {
 
   render() {
     return(
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          Email:
-          <input type="text" onChange={this.handleEmail} />
-        </label>
-        <label>
-          Password:
-          <input type="password" onChange={this.handlePassword}  />
-        </label>
+      <div className={styles.loginBoxBorder}>
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            Email:
+            <input type="text" onChange={this.handleEmail} />
+          </label>
+          <label>
+            Password:
+            <input type="password" onChange={this.handlePassword}  />
+          </label>
         <input type="submit" value="Login"/>
-      </form>
+        </form>
+      </div>
     );
   }
 }
