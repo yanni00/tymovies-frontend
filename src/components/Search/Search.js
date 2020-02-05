@@ -47,17 +47,11 @@ class Search extends React.Component {
     .then( res => {
       console.log('response:', res.data.results);
       const movieData = res.data.results;
-
-      if(movieData === undefined){
-        console.log('YOU HAVE UNDEFINED MOVIE DATA')
-      } else {
-        this.setState({ movies: res.data.results})
-      }
-
+      this.setState({ movies: res.data.results})
     })
     .catch( err => {
       console.warn( err );
-      console.log( 'nupppppp wrong!')
+
     });
   }
 

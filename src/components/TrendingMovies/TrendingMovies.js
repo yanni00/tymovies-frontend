@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import styles from './TrendingMovies.module.css'
 
 class Search extends React.Component {
 
@@ -14,25 +15,24 @@ class Search extends React.Component {
     axios.get(URL)
     .then( res => {
       console.log('response:', res.data.results);
-      this.setState({ movies: res.data.results.slice(0, 14)})
+      this.setState({ movies: res.data.results.slice(0, 18)})
     })
     .catch( err => {
       console.warn( err );
-      console.log( 'nupppppp wrong!')
     });
   }
 
   render(){
 
     return (
-      <div>
-        <h3>Trending This Week</h3>
+      <div className={styles.container}>
+        <h3 className={styles.trendingMoviesHeader}>Trending This Week</h3>
 
         {
           this.state.movies.length >= 1
           ?
           this.state.movies.map( movie =>   (
-             <Link to={`/movies/${movie.id}`} key={movie.id}>
+             <Link className={styles.trendingMoviesLinks} to={`/movies/${movie.id}`} key={movie.id}>
                <img src={`https://image.tmdb.org/t/p/w185/${movie.poster_path}`}/>
              </Link>
           ))

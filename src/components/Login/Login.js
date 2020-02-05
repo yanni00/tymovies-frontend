@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 import axios from 'axios';
+import styles from './Login.module.css';
 
 const URL_USER = 'http://localhost:3000/users.json/' // 'http://10.1.4.76/sessions.json';
 
@@ -42,7 +43,7 @@ class Login extends Component {
     return(
       <form onSubmit={this.handleSubmit}>
         <label>
-          Name:
+          Email:
           <input type="text" onChange={this.handleName} />
         </label>
         <label>

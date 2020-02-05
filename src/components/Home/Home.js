@@ -5,25 +5,25 @@
   import {
   Route,
   Link,
-  HashRouter as Router
+  BrowserRouter as Router
   } from 'react-router-dom';
-  import Login from './Login';
+  import Login from '../Login/Login';
 
-  import Registration from './Registration';
-  import Genres from './Genres';
-  import About from './About';
-  import Search from './Search';
-  import SearchForm from './SearchForm';
-  import MovieShow from './MovieShow';
-  import TrendingMovies from './TrendingMovies';
+  import Registration from '../Registration/Registration';
+  import Genres from '../Genres/Genres';
+  import About from '../About/About';
+  import Search from '../Search/Search';
+  import SearchForm from '../SearchForm/SearchForm';
+  import MovieShow from '../MovieShow/MovieShow';
+  import TrendingMovies from '../TrendingMovies/TrendingMovies';
+  import styles from './Home.module.css';
 
 
   class Home extends React.Component {
-
     render(){
       return(
-        <div>
-          <h1>Ty Movies</h1>
+        <div >
+          <h1 className={styles.header}>Ty Movies</h1>
           <Router>
             <nav>
               <Link to="/">Home</Link> | &nbsp;

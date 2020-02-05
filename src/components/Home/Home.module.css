@@ -1,0 +1,16 @@
+body {
+  background-image: linear-gradient(-180deg, #000000, #777B7E);
+  -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  color:white;
+}
