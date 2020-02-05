@@ -32,13 +32,17 @@
 
   render() {
     return(
+    <div className={styles.createAccountBoxBorder}>
       <form onSubmit = {this.handleSubmit}>
+        <br></br>
         <input type="text" placeholder="User Name" onChange={this.handleName}/> <br/>
         <input type="text" placeholder="Password" onChange={this.handlePwd}/> <br/>
         <input type="text" placeholder="Comfirmed Password" onChange={this.handlePwdConfirmation}/> <br/>
+        <br></br>
         <input type="submit" value="Sign Up"/>
 
       </form>
+    </div>
     );
   }
 }

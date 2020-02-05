@@ -5,9 +5,10 @@
 
     render(){
       return(
-        <div>
-          App
-        </div>
+        <header>
+
+        </header>
+        <UserList></UserList>
       );
     }
   }
