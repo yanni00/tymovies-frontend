@@ -8,13 +8,13 @@ const URL_USER = 'http://localhost:3000/api/user_token/' // 'http://10.1.4.76/se
 class Login extends Component {
 
   state = {
-    name: '',
+    email: '',
     password: '',
-    logged_in: true
+    logged_in: false
   };
 
-  handleName = event => {
-    this.setState({ name: event.target.value });
+  handleEmail = event => {
+    this.setState({ email: event.target.value });
   }
 
   handlePassword = event => {
@@ -22,13 +22,13 @@ class Login extends Component {
   }
 
   login = (userEmail, pwd) => {
-    axios.post(URL_USER, {
-      name: userEmail,
+    axios.post(URL_USER, {auth:{
+      email: userEmail,
       password: pwd
-    })
+    }})
     .then( res => {
       console.log(res);
-      this.setState({ logged_in: res })
+      this.setState({ logged_in: true })
     })
     .catch( err => console.warn(err));
 
@@ -39,7 +39,7 @@ class Login extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.login(this.state.name, this.state.password);
+    this.login(this.state.email, this.state.password);
   }
 
   render() {
@@ -47,7 +47,7 @@ class Login extends Component {
       <form onSubmit={this.handleSubmit}>
         <label>
           Email:
-          <input type="text" onChange={this.handleName} />
+          <input type="text" onChange={this.handleEmail} />
         </label>
         <label>
           Password:
