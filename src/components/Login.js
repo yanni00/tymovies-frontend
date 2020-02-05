@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import axios from 'axios';
 
-const URL_USER = 'http://localhost:3000/users.json/' // 'http://10.1.4.76/sessions.json';
+const URL_USER = 'http://localhost:3000/api/user_token/' // 'http://10.1.4.76/sessions.json';
 
 class Login extends Component {
 
@@ -21,7 +21,10 @@ class Login extends Component {
   }
 
   login = (userEmail, pwd) => {
-    axios.post(URL_USER, {name: userEmail, password: pwd})
+    axios.post(URL_USER, {
+      name: userEmail,
+      password: pwd
+    })
     .then( res => {
       console.log(res);
       this.setState({ logged_in: res })
