@@ -1,9 +1,9 @@
 html {
-<<<<<<< HEAD
-  background-image: linear-gradient(150deg, #000000, #9fa1a2 #000000);
-=======
+
+
+
   background-image: linear-gradient(-180deg, #000000, #777B7E, #000000);
->>>>>>> 514dfbc8d0883ca6db1d5aeecf840a16cc6917c0
+
   -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;
@@ -25,13 +25,13 @@ html {
   text-align: center;
   text-decoration: none;
 }
-<<<<<<< HEAD
+
 a {
   cursor: pointer;
-=======
+}
 
 a, a:active, a:hover{
   color: #ffbe00;
   text-decoration: none;
->>>>>>> 514dfbc8d0883ca6db1d5aeecf840a16cc6917c0
+
 }
