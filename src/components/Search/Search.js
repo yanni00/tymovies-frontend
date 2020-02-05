@@ -94,25 +94,3 @@ class Search extends React.Component {
 } // class
 
 export default Search;
-
-
-// Tony's previous code
-
-//
-// const searchTerm = this.props.match.params.query.toLowerCase();
-//
-// const results = this.state.Movies.filter(proc => {
-//
-//
-//   return proc.name.toLowerCase().includes( searchTerm );
-// });
-
-// <ul>
-// {
-//   results.map( r => (
-//      <li key={r.name}>
-//      {r.name} ({r.rating})
-//      </li>
-//   ))
-// }
-// </ul>
