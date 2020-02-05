@@ -76,7 +76,7 @@ class Search extends React.Component {
           <ul>
           {
             this.state.movies.map( movie =>   (
-               <li key={movie.name}>
+               <li key={movie.id}>
 
                <Link to={`/movies/${movie.id}`}>
                <img src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}/>

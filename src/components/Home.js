@@ -20,16 +20,13 @@
 
   class Home extends React.Component {
 
-    componentDidMount(){
-      // https://api.themoviedb.org/3/trending/all/week?api_key=24d863d54c86392e6e1df55b9a328755
-    }
-
     render(){
       return(
         <div>
           <h1>Ty Movies</h1>
           <Router>
             <nav>
+              <Link to="/">Home</Link> | &nbsp;
               <Link to="/login">Login</Link> | &nbsp;
               <Link to="/registration">Sign Up</Link> | &nbsp;
               <Link to="/genres">Genres</Link> | &nbsp;
@@ -37,7 +34,6 @@
             </nav>
 
 
-            <Route exact path="/home" component={ Home }/>
             <Route path="/" component={ SearchForm }/>
             <Route exact path="/search/:query" component={ Search }/>
             <Route exact path="/movies/:id" component={ MovieShow }/>
@@ -46,7 +42,7 @@
             <Route exact path="/genres" component={ Genres } />
             <Route exact path="/about" component={ About } />
 
-            // <Route exact path="/" component={ TrendingMovies }/>
+            <Route exact path="/" component={ TrendingMovies }/>
           </Router>
 
           {
