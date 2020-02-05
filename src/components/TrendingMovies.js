@@ -14,7 +14,7 @@ class Search extends React.Component {
     axios.get(URL)
     .then( res => {
       console.log('response:', res.data.results);
-      this.setState({ movies: res.data.results.slice(0, 10)})
+      this.setState({ movies: res.data.results.slice(0, 14)})
     })
     .catch( err => {
       console.warn( err );
@@ -33,7 +33,7 @@ class Search extends React.Component {
           ?
           this.state.movies.map( movie =>   (
              <Link to={`/movies/${movie.id}`} key={movie.id}>
-               <img src={`https://image.tmdb.org/t/p/w154/${movie.poster_path}`}/>
+               <img src={`https://image.tmdb.org/t/p/w185/${movie.poster_path}`}/>
              </Link>
           ))
           :
