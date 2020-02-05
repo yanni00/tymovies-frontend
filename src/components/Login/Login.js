@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-
 import axios from 'axios';
 import styles from './Login.module.css';
 
@@ -72,6 +71,7 @@ class Login extends Component {
           <label>
             <br></br>
             Password:
+            <br></br>
             <input type="password" onChange={this.handlePassword}  />
             <br></br>
           </label>

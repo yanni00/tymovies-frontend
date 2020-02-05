@@ -5,10 +5,8 @@
 
     render(){
       return(
-        <header>
-
-        </header>
-        <UserList></UserList>
+      <div>
+      </div>
       );
     }
   }

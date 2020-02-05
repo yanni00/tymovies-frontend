@@ -12,7 +12,6 @@
     }
 
     componentDidMount() {
-
       axios.get(BASE_URL + this.props.match.params.id + '?api_key=24d863d54c86392e6e1df55b9a328755')
       .then( res => {
 

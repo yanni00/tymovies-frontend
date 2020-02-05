@@ -1,6 +1,4 @@
-
   import React from 'react';
-
   import axios from 'axios';
   import {
   Route,
@@ -43,7 +41,6 @@
       localStorage.removeItem('auth_token');
 
     }
-
     render(){
 
       return(
