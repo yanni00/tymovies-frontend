@@ -9,6 +9,7 @@
 
   import Registration from '../Registration/Registration';
   import Genres from '../Genres/Genres';
+  import GenreShow from '../GenreShow/GenreShow';
   import About from '../About/About';
   import Search from '../Search/Search';
   import SearchForm from '../SearchForm/SearchForm';
@@ -44,12 +45,19 @@
     render(){
 
       return(
-        <div>
+        <div >
           <h1 className={styles.header}>Ty Movies</h1>
           <Router>
             <nav className={styles.nav}>
               <Link className={styles.home} to="/">Home</Link> |
-              <Link className={styles.login}to="/login">Login</Link> |
+                {
+                  this.state.loggedIn
+                  ?
+                  <a className={styles.login} onClick={this.handleLogout}>Logout</a>
+                  :
+                  <Link className={styles.login}to="/login">Login</Link>
+                }
+                |
               <Link className={styles.signUp}to="/registration">Sign Up</Link> |
               <Link className={styles.genres}to="/genres">Genres</Link> |
               <Link className={styles.about}to="/about">About Us</Link> |
@@ -59,9 +67,12 @@
             <Route path="/" component={ SearchForm }/>
             <Route exact path="/search/:query" component={ Search }/>
             <Route exact path="/movies/:id" component={ MovieShow }/>
+
             <Route exact path="/login" render={() => <Login onLogin={this.setLoginStatus} /> } />
+
             <Route exact path="/registration" component={ Registration } />
             <Route exact path="/genres" component={ Genres } />
+            <Route exact path="/genres/:id" component={ GenreShow } />
             <Route exact path="/about" component={ About } />
 
             <Route exact path="/" component={ TrendingMovies }/>

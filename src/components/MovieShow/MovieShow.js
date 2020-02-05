@@ -23,6 +23,8 @@
       });
     } //componentDidMount()
 
+
+
     render() {
 
       const movie = this.state.movie;
@@ -45,6 +47,7 @@
             :
             <p>loading...</p>
           }
+
         </div>
       );
     }

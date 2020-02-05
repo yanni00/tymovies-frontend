@@ -10,7 +10,7 @@ class Search extends React.Component {
   }
 
   componentDidMount() {
-    // This is where we make our Axios call
+    
     const URL = 'https://api.themoviedb.org/3/trending/all/week?api_key=24d863d54c86392e6e1df55b9a328755';
     axios.get(URL)
     .then( res => {
