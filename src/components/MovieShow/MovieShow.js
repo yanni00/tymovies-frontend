@@ -1,5 +1,6 @@
   import React from 'react';
   import axios from 'axios';
+  import styles from './MovieShow.module.css';
 
   const BASE_URL = `https://api.themoviedb.org/3/movie/`;
 

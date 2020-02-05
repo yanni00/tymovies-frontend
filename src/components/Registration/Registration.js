@@ -1,5 +1,6 @@
 
   import React, {Component} from 'react';
+  import styles from './Registration.module.css';
 
   class Registration extends Component {
     constructor(props) {

@@ -1,5 +1,6 @@
 
   import React from 'react';
+  import style from './Genres.module.css';
 
   class Genres extends React.Component {
 
@@ -12,7 +13,7 @@
     render(){
       return(
         <div>
-      
+
         </div>
       );
     }

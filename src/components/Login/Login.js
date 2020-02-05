@@ -22,13 +22,29 @@ class Login extends Component {
   }
 
   login = (userEmail, pwd) => {
+    console.log({auth:{
+      email: userEmail,
+      password: pwd
+    }});
     axios.post(URL_USER, {auth:{
       email: userEmail,
       password: pwd
     }})
     .then( res => {
       console.log(res);
-      this.setState({ logged_in: true })
+      if (res.data.jwt) {
+        this.setState({ logged_in: true });
+        localStorage.setItem('auth_token', res.data.jwt);
+
+        // tell the Home component we logged in - so it can update the nav bar
+        this.props.onLogin(true);
+
+        this.props.history.push('/');
+      } else {
+        console.warn("Login error!", res);
+      }
+
+
     })
     .catch( err => console.warn(err));
 
@@ -51,7 +67,7 @@ class Login extends Component {
         </label>
         <label>
           Password:
-          <input type="password" onChange={this.handlePassword} />
+          <input type="password" onChange={this.handlePassword}  />
         </label>
         <input type="submit" value="Login"/>
       </form>

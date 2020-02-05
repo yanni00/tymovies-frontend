@@ -1,5 +1,5 @@
-body {
-  background-image: linear-gradient(-180deg, #000000, #777B7E);
+html {
+  background-image: linear-gradient(150deg, #000000, #9fa1a2 #000000);
   -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;
@@ -20,4 +20,7 @@ html {
   color: white;
   text-align: center;
   text-decoration: none;
+}
+a {
+  cursor: pointer;
 }
