@@ -7,6 +7,7 @@
   } from 'react-router-dom';
   import Login from '../Login/Login';
 
+  // import Review from '../Review/Review'
   import Registration from '../Registration/Registration';
   import Genres from '../Genres/Genres';
   import GenreShow from '../GenreShow/GenreShow';
@@ -64,18 +65,16 @@
               <Link className={styles.about}to="/about">About Us</Link> |
             </nav>
 
-
+            <Route exact path="/TrendingMovies/TrendingMovies"/>
             <Route path="/" component={ SearchForm }/>
             <Route exact path="/search/:query" component={ Search }/>
             <Route exact path="/movies/:id" component={ MovieShow }/>
 
             <Route exact path="/login" render={() => <Login onLogin={this.setLoginStatus} /> } />
-
             <Route exact path="/registration" component={ Registration } />
             <Route exact path="/genres" component={ Genres } />
             <Route exact path="/genres/:id/:name" component={ GenreShow } />
             <Route exact path="/about" component={ About } />
-
             <Route exact path="/" component={ TrendingMovies }/>
           </Router>
           <br/>
