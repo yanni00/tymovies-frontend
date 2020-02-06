@@ -30,7 +30,7 @@
       const movie = this.state.movie;
 
       return (
-        <div>
+        <div className={styles.text}>
           {
             movie.id
             ?

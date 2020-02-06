@@ -1,6 +1,5 @@
   import axios from 'axios';
   import React from 'react';
-  import axios from 'axios';
   import { Link } from 'react-router-dom';
   import styles from './Genres.module.css';
 
@@ -25,16 +24,16 @@
 
     render(){
       return(
-        <div>
+        <div className={styles.text}>
 
           {
             this.state.genres.length >= 1
             ?
-            <ul>
+            <ul >
               {
 
                 this.state.genres.map( genre => (
-                <li>
+                <li >
                   <Link to={`/genres/${genre.id}/${genre.name}`} key={genre.id}>
                   {genre.name}
 

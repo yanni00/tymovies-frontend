@@ -15,6 +15,7 @@
   import SearchForm from '../SearchForm/SearchForm';
   import MovieShow from '../MovieShow/MovieShow';
   import TrendingMovies from '../TrendingMovies/TrendingMovies';
+  import Review from '../Review/Review';
   import styles from './Home.module.css';
 
 
@@ -77,8 +78,11 @@
 
             <Route exact path="/" component={ TrendingMovies }/>
           </Router>
+          <br/>
+          <br/>
 
           <footer>
+          
             &copy; tymovies 2020
           </footer>
         </div>

@@ -26,16 +26,26 @@ a {
 a, a:active, a:hover{
   color: #ffbe00;
   text-decoration: none;
+}
+
+.nav {
+  margin-left: 2vw;
+}
+
+img {
 
 }
 
-footer{
+footer {
+  color: white;
   position: fixed;
   left: 0px;
   bottom: 0px;
   width: 100%;
-  margin-left: 0px;
-  background-image: linear-gradient(90deg, #43799c, #777b7e);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+
 }
 
 #loginBoxBorder{
