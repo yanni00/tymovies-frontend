@@ -5,16 +5,16 @@
   class Review extends React.Component {
 
     state ={
-      review: '',
+      reviews: '',
 
     };
 
     componentDidMount() {
-      const URL = 'https://localhost:3000/reviews';
+      const URL = 'http://localhost:3000/reviews';
       axios.get(URL)
       .then( res => {
         console.log('response:', res.data);
-        this.setState({review: res.data})
+        this.setState({reviews: res.data})
       })
       .catch( err => {
         console.warn( err );

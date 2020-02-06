@@ -51,7 +51,7 @@
           <h1 className={styles.header}>Ty Movies</h1>
           <Router>
             <nav className={styles.nav}>
-              <Link className={styles.home} to="/">Home</Link> |
+
                 {
                   this.state.loggedIn
                   ?
@@ -61,6 +61,7 @@
                 }
                 |
               <Link className={styles.signUp}to="/registration">Sign Up</Link> |
+              <Link className={styles.home} to="/">Home</Link> |
               <Link className={styles.genres}to="/genres">Genres</Link> |
               <Link className={styles.about}to="/about">About Us</Link> |
             </nav>
@@ -70,7 +71,12 @@
             <Route exact path="/search/:query" component={ Search }/>
             <Route exact path="/movies/:id" component={ MovieShow }/>
 
+<<<<<<< HEAD
             <Route exact path="/login" render={() => <Login onLogin={this.setLoginStatus} /> } />
+=======
+            <Route exact path="/login" render={(props) => <Login {...props} onLogin={this.setLoginStatus} /> } />
+
+>>>>>>> c955e16a8922d34a8f5320f089595e7a2d329dc9
             <Route exact path="/registration" component={ Registration } />
             <Route exact path="/genres" component={ Genres } />
             <Route exact path="/genres/:id/:name" component={ GenreShow } />
