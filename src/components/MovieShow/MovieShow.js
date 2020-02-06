@@ -43,6 +43,8 @@
               )}
               </h3>
               <h3>{`Vote Average: ${movie.vote_average}`}</h3>
+
+              
             </div>
             :
             <p>loading...</p>

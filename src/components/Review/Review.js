@@ -5,27 +5,26 @@
   class Review extends React.Component {
 
     state ={
-      name: '',
-      movieTitle: '',
-      movieRating: '',
-      userReview: '',
-      created_at: '',
-      updated_at: ''
+      review: '',
+
     };
 
     componentDidMount() {
-      const URL = 'http://localhost:3000/reviews';
+      const URL = 'https://localhost:3000/reviews';
       axios.get(URL)
       .then( res => {
-        console.log('response:', res);
-        
+        console.log('response:', res.data);
+        this.setState({review: res.data})
       })
+      .catch( err => {
+        console.warn( err );
+      });
     }
 
     render(){
       return(
         <div>
-
+          <h2>reviews here for movie ID : {this.props.movieId}</h2>
         </div>
       );
     }

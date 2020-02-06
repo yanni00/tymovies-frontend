@@ -82,7 +82,7 @@
           <br/>
 
           <footer>
-          
+
             &copy; tymovies 2020
           </footer>
         </div>
