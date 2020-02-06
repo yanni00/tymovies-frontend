@@ -75,7 +75,7 @@
 
             <Route exact path="/registration" component={ Registration } />
             <Route exact path="/genres" component={ Genres } />
-            <Route exact path="/genres/:id" component={ GenreShow } />
+            <Route exact path="/genres/:id/:name" component={ GenreShow } />
             <Route exact path="/about" component={ About } />
 
             <Route exact path="/" component={ TrendingMovies }/>
