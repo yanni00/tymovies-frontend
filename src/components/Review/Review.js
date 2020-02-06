@@ -9,26 +9,69 @@ class Review extends React.Component {
 
   };
 
-  componentDidMount() {
-    const URL = 'http://localhost:3000/reviews';
-    axios.get(URL)
-    .then( res => {
-      console.log('response:', res.data);
-      this.setState({reviews: res.data})
-    })
-    .catch( err => {
-      console.warn( err );
-    });
-  }
+  const URL = 'http://localhost:3000/';
 
-  render(){
-    return(
-      <div>
-        <h2>reviews here for movie ID : {this.props.movieId}</h2>
-      </div>
-    );
-  }
 
+  class Review extends React.Component {
+
+    state ={
+      reviews: [],
+    };
+
+    componentDidMount() {
+
+      axios.get(URL + "reviews")
+      .then( res => {
+        console.log('response:', res.data);
+        this.setState({reviews: res.data})
+      })
+      .catch( err => {
+        console.warn( err );
+      });
+    }
+
+    handleInput = (event) => {
+
+      this.setState({[event.target.id]: event.target.value});
+      console.log(event.target.id)
+      console.log(event.target.value)
+    }
+
+    handleSubmit = (event) => {
+      event.preventDefault()
+      console.log('event', event.target.id);
+      // console.log('review_id', review_id);
+
+
+    }
+
+    render(){
+      return(
+        <div>
+          <h2>Reviews</h2>
+          {this.state.reviews.map( review => (
+            <div key={review.id}>
+              <h4>{review.name}</h4>
+              <p>{review.userReview}</p>
+
+              <h4>{review.user.name}</h4>
+
+              <form
+                id={review.id} className={styles.form} onSubmit={this.handleSubmit}>
+                  <textarea rows="12" cols="55" type="text" id={review.id} onChange={this.handleInput}/>
+                  <br/>
+                  <input className={styles.inputButton} type="submit" value="Comment" />
+                </form>
+            </div>
+          ))
+        }
+
+
+
+        </div>
+      );
+    }
 }
+
 
 export default Review;

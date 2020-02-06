@@ -41,5 +41,8 @@ class CommentForm extends Component {
     this.login(this.state.body,
     this.state.user_id, this.state.review_id)
   }
+  render(){
+    return
+  }
 }
 export default CommentForm;

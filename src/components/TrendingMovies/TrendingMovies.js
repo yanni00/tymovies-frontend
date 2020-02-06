@@ -11,7 +11,7 @@ class Search extends React.Component {
 
   componentDidMount() {
 
-    const URL = 'https://api.themoviedb.org/3/trending/all/day?api_key=24d863d54c86392e6e1df55b9a328755';
+    const URL = 'https://api.themoviedb.org/3/trending/all/week?api_key=24d863d54c86392e6e1df55b9a328755';
     axios.get(URL)
     .then( res => {
       console.log('response:', res.data.results);
@@ -26,7 +26,7 @@ class Search extends React.Component {
 
     return (
       <div className={styles.container}>
-        <h3 className={styles.trendingMoviesHeader}>Trending Movies Today</h3>
+        <h3 className={styles.trendingMoviesHeader}>Trending This Week</h3>
 
         {
           this.state.movies.length >= 1
