@@ -26,7 +26,7 @@
 
         <form className={styles.form} onSubmit={this.handleSubmit}>
           <input type="text" onChange={this.handleInput}/>
-          <input type="submit" value="Search Movies" />
+          <input className={styles.inputButton} type="submit" value="Search Movies" />
         </form>
 
 
