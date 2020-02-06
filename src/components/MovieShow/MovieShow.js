@@ -1,6 +1,7 @@
   import React from 'react';
   import axios from 'axios';
   import styles from './MovieShow.module.css';
+  import Review from '../Review/Review';
 
   const BASE_URL = `https://api.themoviedb.org/3/movie/`;
 
@@ -44,7 +45,10 @@
               </h3>
               <h3>{`Vote Average: ${movie.vote_average}`}</h3>
 
-              
+              <hr/>
+
+              <Review movieId={ movie.id } />
+
             </div>
             :
             <p>loading...</p>
