@@ -42,6 +42,8 @@ import ReviewForm from '../ReviewForm/ReviewForm';
       event.preventDefault()
       console.log('event', event.target.id);
       // console.log('review_id', review_id);
+      this.props.history.push('/');
+
     }
 
     // onReviewAdded = ()
@@ -68,6 +70,7 @@ import ReviewForm from '../ReviewForm/ReviewForm';
                   <textarea rows="12" cols="55" type="text" id={review.id} onChange={this.handleInput}/>
                   <br/>
                   <input className={styles.inputButton} type="submit" value="Comment" />
+
                 </form>
             </div>
           ))
