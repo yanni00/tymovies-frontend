@@ -1,6 +1,13 @@
-  import React, {Component} from 'react';
-  import axios from 'axios';
-  import styles from './Review.module.css';
+import React, {Component} from 'react';
+import axios from 'axios';
+import styles from './Review.module.css';
+
+class Review extends React.Component {
+
+  state ={
+    reviews: '',
+
+  };
 
   const URL = 'http://localhost:3000/reviews';
 
@@ -70,7 +77,7 @@
         </div>
       );
     }
+}
 
-  }
 
-  export default Review;
+export default Review;
