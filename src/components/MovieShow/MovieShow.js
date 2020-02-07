@@ -2,7 +2,6 @@
   import axios from 'axios';
   import styles from './MovieShow.module.css';
   import Review from '../Review/Review';
-  import ReviewForm from '../ReviewForm/ReviewForm';
 
   const BASE_URL = `https://api.themoviedb.org/3/movie/`;
 
@@ -10,7 +9,7 @@
   class MovieShow extends React.Component {
 
     state = {
-      movie: {},
+      movie: {}
     }
 
     componentDidMount() {
@@ -48,8 +47,10 @@
               <h3>{`Vote Average: ${movie.vote_average}`}</h3>
 
               <hr/>
-              <ReviewForm/>
-              <Review movieId={ movie.id } />
+              <Review
+                movieId={ movie.id }
+                newReviews={ this.state.newReviews }
+              />
 
             </div>
             :

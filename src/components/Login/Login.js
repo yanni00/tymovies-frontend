@@ -38,7 +38,7 @@ class Login extends Component {
         // tell the Home component we logged in - so it can update the nav bar
         this.props.onLogin(true);
 
-        this.props.history.push('/TrendingMovies/TrendingMovies');
+        this.props.history.push('/');
       } else {
         console.warn("Login error!", res);
       }
@@ -48,7 +48,7 @@ class Login extends Component {
     .catch( err => console.warn(err));
 
     if (this.state.logged_in) {
-      this.props.history.push('/TrendingMovies/TrendingMovies');
+      this.props.history.push('/');
     }
   }
 

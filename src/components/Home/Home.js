@@ -67,7 +67,6 @@
               <Link className={styles.about}to="/about">About Us</Link> |
             </nav>
 
-            <Route exact path="/TrendingMovies/TrendingMovies"/>
             <Route path="/" component={ SearchForm }/>
             <Route exact path="/search/:query" component={ Search }/>
             <Route exact path="/movies/:id" component={ MovieShow }/>

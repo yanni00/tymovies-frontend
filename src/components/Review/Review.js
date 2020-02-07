@@ -2,74 +2,82 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import CommentForm from '../CommentForm/CommentForm';
 import styles from './Review.module.css';
+import ReviewForm from '../ReviewForm/ReviewForm';
+
+  const URL = 'http://localhost:3000/reviews/';
 
 
-const URL = 'http://localhost:3000/';
-const URL_USER = 'http://localhost:3000/api/user_token'
-const URL_COMMENTS = 'http://localhost:3000/comments'
+  class Review extends React.Component {
 
-class Review extends React.Component {
+    state ={
+      reviews: [],
+    };
 
-  state ={
-    reviews: [],
-  };
+    componentDidMount() {
 
-  componentDidMount() {
+      const token = localStorage.getItem('auth_token');
 
-    axios.get(URL + "reviews")
-    .then( res => {
-      console.log('response:', res.data);
-      this.setState({reviews: res.data})
-    })
-    .catch( err => {
-      console.warn( err );
-    });
-  }
+      axios.get(URL + this.props.movieId, {
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      })
+      .then( res => {
+        console.log('response:', res.data);
+        this.setState({reviews: res.data})
+      })
+      .catch( err => {
+        console.warn( err );
+      });
+    }
 
-  handleSubmit = (comment, reviewId) => {
-    // event.preventDefault()
-    // console.log('event', event.target.id);
-    // // console.log('review_id', review_id);
+    handleInput = (event) => {
 
-    const jwt = localStorage.getItem('jwt')
+      this.setState({[event.target.id]: event.target.value});
+      console.log(event.target.id)
+      console.log(event.target.value)
+    }
 
-    axios.get(URL_USER, {
-      headers:{
-      Authorization: "Bearer" + jwt
-      }})
-      .then( result => {
-      const user_id = result.data.userId;
+    handleSubmit = (event) => {
+      event.preventDefault()
+      console.log('event', event.target.id);
+      // console.log('review_id', review_id);
+    }
 
-      axios.post(URL_COMMENTS, {
-      userReview: ,
-      review_id: ,
-      user_id:
-      }).then( res => {} )
-      .catch(err => console.log(err))
-    })
-  }
+    // onReviewAdded = ()
 
-  render(){
-    return(
-      <div>
-        <h2>Reviews</h2>
-        {this.state.reviews.map( review => (
-          <div key={review.id}>
-            <h4>{review.name}</h4>
-            <p>{review.userReview}</p>
+    render(){
+      return(
+        <div>
 
-            <h4>{review.user.name}</h4>
+          <ReviewForm
+            movieId={this.props.movieId}
+            onReviewAdded={ this.addReview }
+            />
 
-            <CommentForm reviewId={review.id} onSubmit={handleSubmit} />
-          </div>
-        ))
-      }
+          <h2>Reviews</h2>
+          {this.state.reviews.map( review => (
+            <div key={review.id}>
+              <h4>{review.name}</h4>
+              <p>{review.userReview}</p>
+
+              <h4>{review.user.name}</h4>
+
+              <form
+                id={review.id} className={styles.form} onSubmit={this.handleSubmit}>
+                  <textarea rows="12" cols="55" type="text" id={review.id} onChange={this.handleInput}/>
+                  <br/>
+                  <input className={styles.inputButton} type="submit" value="Comment" />
+                </form>
+            </div>
+          ))
+        }
 
 
 
-      </div>
-    );
-  }
+        </div>
+      );
+    }
 }
 
 

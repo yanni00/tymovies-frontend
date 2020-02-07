@@ -9,7 +9,8 @@
 
     state = {
       name: '',
-      content:''
+      content:'',
+      movieId: ''
     };
 
     handleInput = event => {
@@ -21,11 +22,25 @@
     }
 
     handleSubmit = (event) => {
-      event.preventDefault()
-      this.props.handleSubmit(event)
-      axios.post(URL, {
+      event.preventDefault();
+
+      // this.props.handleSubmit(event)
+
+      const token = localStorage.getItem('auth_token');
+
+      axios.post(URL,
+      // form data (becomes params in Rails)
+      {
         name: this.state.name,
-        content: this.state.content
+        content: this.state.content,
+        movieId: this.props.movieId
+
+      },
+      // config:
+      {
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
       })
       .then( res => {
         console.log('response:', res.data);
@@ -43,7 +58,7 @@
           <h2>Add your review</h2>
 
           <form onSubmit={this.handleSubmit}>
-            this.props.handleSubmit
+
           <input placeholder="Name" type="text" onChange={this.handleInput}/>
 
           <br/>
