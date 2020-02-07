@@ -1,76 +1,75 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import CommentForm from '../CommentForm/CommentForm';
 import styles from './Review.module.css';
+
+
+const URL = 'http://localhost:3000/';
+const URL_USER = 'http://localhost:3000/api/user_token'
+const URL_COMMENTS = 'http://localhost:3000/comments'
 
 class Review extends React.Component {
 
   state ={
-    reviews: '',
-
+    reviews: [],
   };
 
-  const URL = 'http://localhost:3000/';
+  componentDidMount() {
 
+    axios.get(URL + "reviews")
+    .then( res => {
+      console.log('response:', res.data);
+      this.setState({reviews: res.data})
+    })
+    .catch( err => {
+      console.warn( err );
+    });
+  }
 
-  class Review extends React.Component {
+  handleSubmit = (comment, reviewId) => {
+    // event.preventDefault()
+    // console.log('event', event.target.id);
+    // // console.log('review_id', review_id);
 
-    state ={
-      reviews: [],
-    };
+    const jwt = localStorage.getItem('jwt')
 
-    componentDidMount() {
+    axios.get(URL_USER, {
+      headers:{
+      Authorization: "Bearer" + jwt
+      }})
+      .then( result => {
+      const user_id = result.data.userId;
 
-      axios.get(URL + "reviews")
-      .then( res => {
-        console.log('response:', res.data);
-        this.setState({reviews: res.data})
-      })
-      .catch( err => {
-        console.warn( err );
-      });
-    }
+      axios.post(URL_COMMENTS, {
+      userReview: ,
+      review_id: ,
+      user_id:
+      }).then( res => {} )
+      .catch(err => console.log(err))
+    })
+  }
 
-    handleInput = (event) => {
+  render(){
+    return(
+      <div>
+        <h2>Reviews</h2>
+        {this.state.reviews.map( review => (
+          <div key={review.id}>
+            <h4>{review.name}</h4>
+            <p>{review.userReview}</p>
 
-      this.setState({[event.target.id]: event.target.value});
-      console.log(event.target.id)
-      console.log(event.target.value)
-    }
+            <h4>{review.user.name}</h4>
 
-    handleSubmit = (event) => {
-      event.preventDefault()
-      console.log('event', event.target.id);
-      // console.log('review_id', review_id);
-
-
-    }
-
-    render(){
-      return(
-        <div>
-          <h2>Reviews</h2>
-          {this.state.reviews.map( review => (
-            <div key={review.id}>
-              <h4>{review.name}</h4>
-              <p>{review.userReview}</p>
-
-              <h4>{review.user.name}</h4>
-
-              <form
-                id={review.id} className={styles.form} onSubmit={this.handleSubmit}>
-                  <textarea rows="12" cols="55" type="text" id={review.id} onChange={this.handleInput}/>
-                  <br/>
-                  <input className={styles.inputButton} type="submit" value="Comment" />
-                </form>
-            </div>
-          ))
-        }
+            <CommentForm reviewId={review.id} onSubmit={handleSubmit} />
+          </div>
+        ))
+      }
 
 
 
-        </div>
-      );
-    }
+      </div>
+    );
+  }
 }
 
 
