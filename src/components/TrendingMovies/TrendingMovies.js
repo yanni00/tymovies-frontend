@@ -15,7 +15,7 @@ class Search extends React.Component {
     axios.get(URL)
     .then( res => {
       console.log('response:', res.data.results);
-      this.setState({ movies: res.data.results.slice(0, 18)})
+      this.setState({ movies: res.data.results.slice(0, 12)})
     })
     .catch( err => {
       console.warn( err );

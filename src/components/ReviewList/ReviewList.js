@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import CommentForm from '../CommentForm/CommentForm';
-import styles from './Review.module.css';
+import styles from './ReviewList.module.css';
 import ReviewForm from '../ReviewForm/ReviewForm';
 
   const URL = 'http://localhost:3000/reviews/';
 
 
-  class Review extends React.Component {
+  class ReviewList extends React.Component {
 
     state ={
       reviews: [],
@@ -31,6 +31,8 @@ import ReviewForm from '../ReviewForm/ReviewForm';
       });
     }
 
+    // onReviewAdded = ()
+
     handleInput = (event) => {
 
       this.setState({[event.target.id]: event.target.value});
@@ -44,7 +46,6 @@ import ReviewForm from '../ReviewForm/ReviewForm';
       // console.log('review_id', review_id);
     }
 
-    // onReviewAdded = ()
 
     render(){
       return(
@@ -65,7 +66,7 @@ import ReviewForm from '../ReviewForm/ReviewForm';
 
               <form
                 id={review.id} className={styles.form} onSubmit={this.handleSubmit}>
-                  <textarea rows="12" cols="55" type="text" id={review.id} onChange={this.handleInput}/>
+                  <textarea rows="10" cols="35" type="text" id={review.id} onChange={this.handleInput}/>
                   <br/>
                   <input className={styles.inputButton} type="submit" value="Comment" />
                 </form>
@@ -81,4 +82,4 @@ import ReviewForm from '../ReviewForm/ReviewForm';
 }
 
 
-export default Review;
+export default ReviewList;
