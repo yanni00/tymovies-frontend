@@ -2,7 +2,7 @@
   import axios from 'axios';
   import styles from './Review.module.css';
 
-  const URL = 'http://localhost:3000/';
+  const URL = 'http://localhost:3000/reviews';
 
 
   class Review extends React.Component {
@@ -13,7 +13,13 @@
 
     componentDidMount() {
 
-      axios.get(URL + "reviews")
+      const token = localStorage.getItem('auth_token');
+
+      axios.get(URL, {
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      })
       .then( res => {
         console.log('response:', res.data);
         this.setState({reviews: res.data})

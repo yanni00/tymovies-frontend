@@ -66,17 +66,14 @@
               <Link className={styles.about}to="/about">About Us</Link> |
             </nav>
 
-            <Route exact path="/TrendingMovies/TrendingMovies"/>
             <Route path="/" component={ SearchForm }/>
             <Route exact path="/search/:query" component={ Search }/>
             <Route exact path="/movies/:id" component={ MovieShow }/>
 
-<<<<<<< HEAD
-            <Route exact path="/login" render={() => <Login onLogin={this.setLoginStatus} /> } />
-=======
+
             <Route exact path="/login" render={(props) => <Login {...props} onLogin={this.setLoginStatus} /> } />
 
->>>>>>> c955e16a8922d34a8f5320f089595e7a2d329dc9
+
             <Route exact path="/registration" component={ Registration } />
             <Route exact path="/genres" component={ Genres } />
             <Route exact path="/genres/:id/:name" component={ GenreShow } />
