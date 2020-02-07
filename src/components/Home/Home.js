@@ -16,7 +16,7 @@
   import SearchForm from '../SearchForm/SearchForm';
   import MovieShow from '../MovieShow/MovieShow';
   import TrendingMovies from '../TrendingMovies/TrendingMovies';
-  import Review from '../Review/Review';
+  // import Review from '../Review/Review';
   import CommentForm from '../CommentForm/CommentForm';
   import styles from './Home.module.css';
 
