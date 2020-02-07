@@ -1,15 +1,10 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import styles from './Review.module.css';
+import ReviewForm from '../ReviewForm/ReviewForm';
 
-class Review extends React.Component {
 
-  state ={
-    reviews: '',
-
-  };
-
-  const URL = 'http://localhost:3000/reviews';
+  const URL = 'http://localhost:3000/reviews/';
 
 
   class Review extends React.Component {
@@ -22,7 +17,7 @@ class Review extends React.Component {
 
       const token = localStorage.getItem('auth_token');
 
-      axios.get(URL, {
+      axios.get(URL + this.props.movieId, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -47,13 +42,19 @@ class Review extends React.Component {
       event.preventDefault()
       console.log('event', event.target.id);
       // console.log('review_id', review_id);
-
-
     }
+
+    // onReviewAdded = ()
 
     render(){
       return(
         <div>
+
+          <ReviewForm
+            movieId={this.props.movieId}
+            onReviewAdded={ this.addReview }
+            />
+
           <h2>Reviews</h2>
           {this.state.reviews.map( review => (
             <div key={review.id}>

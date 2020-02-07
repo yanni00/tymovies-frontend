@@ -9,7 +9,8 @@
 
     state = {
       name: '',
-      content:''
+      content:'',
+      movieId: ''
     };
 
     handleInput = event => {
@@ -31,7 +32,9 @@
       // form data (becomes params in Rails)
       {
         name: this.state.name,
-        content: this.state.content
+        content: this.state.content,
+        movieId: this.props.movieId
+
       },
       // config:
       {
