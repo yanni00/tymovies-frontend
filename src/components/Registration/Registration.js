@@ -61,10 +61,10 @@ class Registration extends Component {
     <div className={styles.createAccountBoxBorder}>
         <form onSubmit = {this.handleSubmit}>
           <br></br>
-          <input type="text" placeholder="Email" onChange={this.handleEmail}/> <br/>
+          <input type="email" placeholder="Email" onChange={this.handleEmail}/> <br/>
           <input type="text" placeholder="User Name" onChange={this.handleName}/> <br/>
-          <input type="text" placeholder="Password" onChange={this.handlePassword}/> <br/>
-          <input type="text" placeholder="Comfirmed Password" onChange={this.handlePasswordConfirmation}/> <br/>
+          <input type="password" placeholder="Password" onChange={this.handlePassword}/> <br/>
+          <input type="password" placeholder="Comfirmed Password" onChange={this.handlePasswordConfirmation}/> <br/>
           <br></br>
           <input type="submit" value="Sign Up"/>
 
