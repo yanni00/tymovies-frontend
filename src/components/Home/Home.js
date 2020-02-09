@@ -17,7 +17,7 @@
   import MovieShow from '../MovieShow/MovieShow';
   import TrendingMovies from '../TrendingMovies/TrendingMovies';
   import ReviewList from '../ReviewList/ReviewList';
-  import CommentForm from '../CommentForm/CommentForm';
+
   import styles from './Home.module.css';
 
 
@@ -76,7 +76,7 @@
             <Route exact path="/genres/:id/:name" component={ GenreShow } />
             <Route exact path="/about" component={ About } />
             <Route exact path="/" component={ TrendingMovies }/>
-            <Route exact path="/commentstest" component={ CommentForm }/>
+      
           </Router>
           <br/>
           <br/>

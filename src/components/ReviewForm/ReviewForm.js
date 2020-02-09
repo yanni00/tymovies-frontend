@@ -2,7 +2,7 @@
 
   import axios from 'axios';
   import React from 'react';
-  import styles from './ReviewForm.module.css'
+
 
   const URL = 'http://localhost:3000/reviews';
   class ReviewForm extends React.Component {
@@ -46,7 +46,7 @@
       .then( res => {
         console.log('response:', res.data);
         this.props.onReviewAdded(res.data);
-        // this.setState({reviews: res.data})
+
       })
       .catch( err => {
         console.warn( err );
