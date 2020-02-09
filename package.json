@@ -6,6 +6,7 @@
     "npm": "6.13.4",
     "node": "13.5.0"
   },
+
   "homepage": "https://yanni00.github.io/tymovies-frontend/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",

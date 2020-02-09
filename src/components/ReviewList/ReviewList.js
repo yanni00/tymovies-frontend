@@ -4,9 +4,6 @@ import CommentForm from '../CommentForm/CommentForm';
 import styles from './ReviewList.module.css';
 import ReviewForm from '../ReviewForm/ReviewForm';
 
-  const REVIEWS_URL = 'http://localhost:3000/reviews/';
-  const COMMENT_URL = 'http://localhost:3000/comments/';
-
   let REVIEWS_URL = '';
     if (process.env.NODE_ENV !== 'production') {
       url = 'http://localhost:3000/reviews/';
