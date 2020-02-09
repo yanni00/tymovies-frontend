@@ -2,7 +2,14 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import styles from './Login.module.css';
 
-const URL_USER = 'http://localhost:3000/api/user_token/' // 'http://10.1.4.76/sessions.json';
+// const URL_USER = 'http://localhost:3000/api/user_token/' // 'http://10.1.4.76/sessions.json';
+let URL_USER = '';
+  if (process.env.NODE_ENV !== 'production') {
+    url = 'http://localhost:3000/api/user_token/';
+  } else {
+    url = 'https://tymovie-server.herokuapp.com/api/user_token/';
+  }
+
 
 class Login extends Component {
 

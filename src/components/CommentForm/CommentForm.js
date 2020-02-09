@@ -2,7 +2,14 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import styles from './CommentForm.module.css';
 
-const URL_USER = 'http://localhost:3000/commentsto';
+// const URL_USER = 'http://localhost:3000/commentsto';
+let URL_USER = '';
+  if (process.env.NODE_ENV !== 'production') {
+    url = 'http://localhost:3000/commentsto';
+  } else {
+    url = 'https://tymovie-server.herokuapp.com/commentsto';
+  }
+
 
 class CommentForm extends Component {
 

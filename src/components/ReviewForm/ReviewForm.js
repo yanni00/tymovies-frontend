@@ -4,7 +4,14 @@
   import React from 'react';
   import styles from './ReviewForm.module.css'
 
-  const URL = 'http://localhost:3000/reviews';
+  // const URL = 'http://localhost:3000/reviews';
+  let URL_USER = '';
+    if (process.env.NODE_ENV !== 'production') {
+      url = 'http://localhost:3000/reviews/';
+    } else {
+      url = 'https://tymovie-server.herokuapp.com/reviews/';
+    }
+
   class ReviewForm extends React.Component {
 
     state = {
