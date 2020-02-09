@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/tymovies-frontend/static/css/main.31263280.chunk.css",
-    "main.js": "/tymovies-frontend/static/js/main.5c8631b0.chunk.js",
-    "main.js.map": "/tymovies-frontend/static/js/main.5c8631b0.chunk.js.map",
+    "main.js": "/tymovies-frontend/static/js/main.6b6bf480.chunk.js",
+    "main.js.map": "/tymovies-frontend/static/js/main.6b6bf480.chunk.js.map",
     "runtime-main.js": "/tymovies-frontend/static/js/runtime-main.27304447.js",
     "runtime-main.js.map": "/tymovies-frontend/static/js/runtime-main.27304447.js.map",
-    "static/js/2.7368014d.chunk.js": "/tymovies-frontend/static/js/2.7368014d.chunk.js",
-    "static/js/2.7368014d.chunk.js.map": "/tymovies-frontend/static/js/2.7368014d.chunk.js.map",
+    "static/js/2.765f83b3.chunk.js": "/tymovies-frontend/static/js/2.765f83b3.chunk.js",
+    "static/js/2.765f83b3.chunk.js.map": "/tymovies-frontend/static/js/2.765f83b3.chunk.js.map",
     "index.html": "/tymovies-frontend/index.html",
-    "precache-manifest.92d93b1c5bc48de411e9915add6e09ca.js": "/tymovies-frontend/precache-manifest.92d93b1c5bc48de411e9915add6e09ca.js",
+    "precache-manifest.4e25a5813c695848a804eb9564156e90.js": "/tymovies-frontend/precache-manifest.4e25a5813c695848a804eb9564156e90.js",
     "service-worker.js": "/tymovies-frontend/service-worker.js",
     "static/css/main.31263280.chunk.css.map": "/tymovies-frontend/static/css/main.31263280.chunk.css.map",
-    "static/js/2.7368014d.chunk.js.LICENSE.txt": "/tymovies-frontend/static/js/2.7368014d.chunk.js.LICENSE.txt"
+    "static/js/2.765f83b3.chunk.js.LICENSE.txt": "/tymovies-frontend/static/js/2.765f83b3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.27304447.js",
-    "static/js/2.7368014d.chunk.js",
+    "static/js/2.765f83b3.chunk.js",
     "static/css/main.31263280.chunk.css",
-    "static/js/main.5c8631b0.chunk.js"
+    "static/js/main.6b6bf480.chunk.js"
   ]
 }
