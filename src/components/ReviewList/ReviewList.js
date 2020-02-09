@@ -4,20 +4,23 @@ import CommentForm from '../CommentForm/CommentForm';
 import styles from './ReviewList.module.css';
 import ReviewForm from '../ReviewForm/ReviewForm';
 
-  const URL = 'http://localhost:3000/reviews/';
+  const REVIEWS_URL = 'http://localhost:3000/reviews/';
+  const COMMENT_URL = 'http://localhost:3000/comments';
 
 
   class ReviewList extends React.Component {
 
     state ={
       reviews: [],
+      comment: '',
+      visibleCommentForReviewId: null
     };
 
     componentDidMount() {
 
       const token = localStorage.getItem('auth_token');
 
-      axios.get(URL + this.props.movieId, {
+      axios.get(REVIEWS_URL + this.props.movieId, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -31,11 +34,17 @@ import ReviewForm from '../ReviewForm/ReviewForm';
       });
     }
 
-    // onReviewAdded = ()
+    addReview = (review) => {
+      console.log('in ReviewList::addReview(), got arg:', review);
+      // this.state.reviews.push( review );
+      this.setState({ reviews: [ review, ...this.state.reviews ] });
+    }
+
+
 
     handleInput = (event) => {
 
-      this.setState({[event.target.id]: event.target.value});
+      this.setState({comment: event.target.value});
       console.log(event.target.id)
       console.log(event.target.value)
     }
@@ -43,10 +52,36 @@ import ReviewForm from '../ReviewForm/ReviewForm';
     handleSubmit = (event) => {
       event.preventDefault()
       console.log('event', event.target.id);
-      // console.log('review_id', review_id);
-      this.props.history.push('/');
 
+      const comment = this.state.comment;
+      const reviewId = this.state.visibleCommentForReviewId;
+
+      // console.log('review_id', review_id);
+
+      const token = localStorage.getItem('auth_token')
+
+      axios.post( COMMENT_URL,
+        {
+          body: comment,
+          review_id: reviewId
+        },
+        {
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+      })
+      .then( res => {
+        console.log('comment response:', res.data);
+      })
+      .catch( err => {
+        console.warn( err );
+      });
     }
+      // this.props.history.push('/');
+
+
+
+
 
 
     render(){
@@ -60,12 +95,32 @@ import ReviewForm from '../ReviewForm/ReviewForm';
 
           <h2>Reviews</h2>
           {this.state.reviews.map( review => (
-            <div key={review.id}>
+            <div key={review.id} style={{border: '1px solid grey', padding: '20px', width: '60%' }} >
               <h4>{review.name}</h4>
               <p>{review.userReview}</p>
-
               <h4>{review.user.name}</h4>
+              {
+                new Date(review.created_at).toLocaleDateString("en-AU", { hour: 'numeric', minute: 'numeric',  weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})
+              }
+                <br/>
+                <br/>
 
+              {
+                review.comments.map( comment => (
+                  <div key={comment.id} style={{border: '1px solid grey', padding: '20px', width: '60%'}}>
+                    <h2>Comments</h2>
+                    <h4>{ comment.body }</h4>
+                    <h4>{ comment.user.name }</h4>
+                      {
+                        new Date(review.created_at).toLocaleDateString("en-AU", { hour: 'numeric', minute: 'numeric',  weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})
+                      }
+                  </div>
+                ))
+              }
+
+              {
+                this.state.visibleCommentForReviewId === review.id
+                ?
               <form
                 id={review.id} className={styles.form} onSubmit={this.handleSubmit}>
                   <textarea rows="10" cols="35" type="text" id={review.id} onChange={this.handleInput}/>
@@ -73,6 +128,10 @@ import ReviewForm from '../ReviewForm/ReviewForm';
                   <input className={styles.inputButton} type="submit" value="Comment" />
 
                 </form>
+                :
+                <button onClick={ () => this.setState({ visibleCommentForReviewId: review.id }) }>Add Comment</button>
+              }
+
             </div>
           ))
         }

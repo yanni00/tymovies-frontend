@@ -22,6 +22,7 @@
     }
 
     handleSubmit = (event) => {
+
       event.preventDefault();
 
       // this.props.handleSubmit(event)
@@ -44,7 +45,7 @@
       })
       .then( res => {
         console.log('response:', res.data);
-
+        this.props.onReviewAdded(res.data);
         // this.setState({reviews: res.data})
       })
       .catch( err => {
