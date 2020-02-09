@@ -6,9 +6,9 @@ import styles from './Login.module.css';
 
 let URL_USER = '';
   if (process.env.NODE_ENV !== 'production') {
-    URL_USER = 'http://localhost:3000/api/user_token/';
+    URL_USER = 'http://localhost:3000/api/user_token';
   } else {
-    URL_USER = 'https://tymovie-server.herokuapp.com/api/user_token/';
+    URL_USER = 'https://tymovie-server.herokuapp.com/api/user_token';
   }
 
 
