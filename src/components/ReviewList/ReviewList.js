@@ -41,7 +41,7 @@ import ReviewForm from '../ReviewForm/ReviewForm';
 
     addComment = (comment) => {
       console.log('in ReviewList:addComment(), got arg:', comment);
-      // this.setState({ comment: this.reviews.comment });
+      // this.setState({ comment:  });
     }
 
     handleInput = (event) => {

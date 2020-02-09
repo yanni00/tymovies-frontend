@@ -6,3 +6,9 @@ div {
   margin-left: 10px;
   margin-top: 20px;
 }
+
+.genreList {
+  list-style-type: none;
+  padding: 0%;
+  margin: 2px;
+}

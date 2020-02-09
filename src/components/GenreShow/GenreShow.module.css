@@ -1,0 +1,11 @@
+.Header {
+  color: white;
+  margin-top: 3vw;
+  margin-bottom: 2vw;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+}
