@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/yanni00/tymovies-frontend.git/static/css/main.b3d91107.chunk.css",
-    "main.js": "/yanni00/tymovies-frontend.git/static/js/main.39acad5c.chunk.js",
-    "main.js.map": "/yanni00/tymovies-frontend.git/static/js/main.39acad5c.chunk.js.map",
+    "main.css": "/yanni00/tymovies-frontend.git/static/css/main.31263280.chunk.css",
+    "main.js": "/yanni00/tymovies-frontend.git/static/js/main.1b109a4a.chunk.js",
+    "main.js.map": "/yanni00/tymovies-frontend.git/static/js/main.1b109a4a.chunk.js.map",
     "runtime-main.js": "/yanni00/tymovies-frontend.git/static/js/runtime-main.2475bf19.js",
     "runtime-main.js.map": "/yanni00/tymovies-frontend.git/static/js/runtime-main.2475bf19.js.map",
-    "static/js/2.37305981.chunk.js": "/yanni00/tymovies-frontend.git/static/js/2.37305981.chunk.js",
-    "static/js/2.37305981.chunk.js.map": "/yanni00/tymovies-frontend.git/static/js/2.37305981.chunk.js.map",
+    "static/js/2.7368014d.chunk.js": "/yanni00/tymovies-frontend.git/static/js/2.7368014d.chunk.js",
+    "static/js/2.7368014d.chunk.js.map": "/yanni00/tymovies-frontend.git/static/js/2.7368014d.chunk.js.map",
     "index.html": "/yanni00/tymovies-frontend.git/index.html",
-    "precache-manifest.6d6fd08b235240c8b240b1145ea13578.js": "/yanni00/tymovies-frontend.git/precache-manifest.6d6fd08b235240c8b240b1145ea13578.js",
+    "precache-manifest.01c34381ebd60e6fbad8f605e0bbb134.js": "/yanni00/tymovies-frontend.git/precache-manifest.01c34381ebd60e6fbad8f605e0bbb134.js",
     "service-worker.js": "/yanni00/tymovies-frontend.git/service-worker.js",
-    "static/css/main.b3d91107.chunk.css.map": "/yanni00/tymovies-frontend.git/static/css/main.b3d91107.chunk.css.map",
-    "static/js/2.37305981.chunk.js.LICENSE": "/yanni00/tymovies-frontend.git/static/js/2.37305981.chunk.js.LICENSE"
+    "static/css/main.31263280.chunk.css.map": "/yanni00/tymovies-frontend.git/static/css/main.31263280.chunk.css.map",
+    "static/js/2.7368014d.chunk.js.LICENSE.txt": "/yanni00/tymovies-frontend.git/static/js/2.7368014d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2475bf19.js",
-    "static/js/2.37305981.chunk.js",
-    "static/css/main.b3d91107.chunk.css",
-    "static/js/main.39acad5c.chunk.js"
+    "static/js/2.7368014d.chunk.js",
+    "static/css/main.31263280.chunk.css",
+    "static/js/main.1b109a4a.chunk.js"
   ]
 }

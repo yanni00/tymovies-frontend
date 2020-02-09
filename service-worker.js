@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/yanni00/tymovies-frontend.git/precache-manifest.6d6fd08b235240c8b240b1145ea13578.js"
+  "/yanni00/tymovies-frontend.git/precache-manifest.01c34381ebd60e6fbad8f605e0bbb134.js"
 );
 
 self.addEventListener('message', (event) => {
