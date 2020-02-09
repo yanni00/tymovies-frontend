@@ -6,11 +6,10 @@ import React, {Component} from 'react';
 
   let URL_USER = '';
     if (process.env.NODE_ENV !== 'production') {
-      url = 'http://localhost:3000/users';
+      URL_USER = 'http://localhost:3000/users';
     } else {
-      url = 'https://tymovie-server.herokuapp.com/users';
+      URL_USER = 'https://tymovie-server.herokuapp.com/users';
     }
-  end
 
 class Registration extends Component {
 

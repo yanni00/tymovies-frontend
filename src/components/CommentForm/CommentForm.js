@@ -5,9 +5,9 @@ import styles from './CommentForm.module.css';
 // const URL_USER = 'http://localhost:3000/commentsto';
 let URL_USER = '';
   if (process.env.NODE_ENV !== 'production') {
-    url = 'http://localhost:3000/commentsto';
+    URL_USER = 'http://localhost:3000/commentsto';
   } else {
-    url = 'https://tymovie-server.herokuapp.com/commentsto';
+    URL_USER = 'https://tymovie-server.herokuapp.com/commentsto';
   }
 
 

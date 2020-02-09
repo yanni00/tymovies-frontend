@@ -6,16 +6,16 @@ import ReviewForm from '../ReviewForm/ReviewForm';
 
   let REVIEWS_URL = '';
     if (process.env.NODE_ENV !== 'production') {
-      url = 'http://localhost:3000/reviews/';
+      REVIEWS_URL = 'http://localhost:3000/reviews/';
     } else {
-      url = 'https://tymovie-server.herokuapp.com/reviews/';
+      REVIEWS_URL = 'https://tymovie-server.herokuapp.com/reviews/';
     }
 
   let COMMENT_URL = '';
     if (process.env.NODE_ENV !== 'production') {
-      url = 'http://localhost:3000/comments/';
+      COMMENT_URL = 'http://localhost:3000/comments/';
     } else {
-      url = 'https://tymovie-server.herokuapp.com/comments/';
+      COMMENT_URL = 'https://tymovie-server.herokuapp.com/comments/';
     }
 
   class ReviewList extends React.Component {
