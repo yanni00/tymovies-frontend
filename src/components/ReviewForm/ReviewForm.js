@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+=======
+>>>>>>> 8bb1599e7028500637e424ddaed5c963a54f5cec
   import axios from 'axios';
   import React from 'react';
 
@@ -12,15 +16,15 @@
 
     constructor(props) {
 
-    super(props)
+      super(props)
 
-    this.state = {
-      name: '',
-      content:'',
-      movieId: ''
-    };
+      this.state = {
+        name: '',
+        content:'',
+        movieId: ''
+      };
 
-  }
+    }
 
 
     handleInput = event => {
@@ -38,8 +42,8 @@
       // this.props.handleSubmit(event)
 
       const token = localStorage.getItem('auth_token');
-
-      // if (token === true) {
+      console.log('token!', token)
+      if (token !== null) {
 
       axios.post(URL,
       // form data (becomes params in Rails)
@@ -64,13 +68,11 @@
         console.warn( err );
       });
 
-    // } else {
-
-
-      // this.props.history.push("/login");
-    // }
-
+    } else {
+      
+      window.location.href = '/login'
     }
+  }
 
 
     render(){
