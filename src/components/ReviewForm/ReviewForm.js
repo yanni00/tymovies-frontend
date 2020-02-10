@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 8bb1599e7028500637e424ddaed5c963a54f5cec
   import axios from 'axios';
   import React from 'react';
 
