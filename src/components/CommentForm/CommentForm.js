@@ -62,7 +62,7 @@ class CommentForm extends Component {
         className={styles.form} onSubmit={this.handleSubmit}>
           <textarea rows="12" cols="55" type="text" onChange={this.handleInput}/>
           <br/>
-          
+
           <input className={styles.inputButton} type="submit" value="Comment" />
       </form>
 
