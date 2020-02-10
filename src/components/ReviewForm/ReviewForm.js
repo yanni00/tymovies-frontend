@@ -4,7 +4,14 @@
   import React from 'react';
 
 
-  const URL = 'http://localhost:3000/reviews';
+  // const URL = 'http://localhost:3000/reviews';
+  let URL_USER = '';
+    if (process.env.NODE_ENV !== 'production') {
+      URL_USER = 'http://localhost:3000/reviews/';
+    } else {
+      URL_USER = 'https://tymovie-server.herokuapp.com/reviews/';
+    }
+
   class ReviewForm extends React.Component {
 
     constructor(props) {

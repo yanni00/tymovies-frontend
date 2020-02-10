@@ -4,9 +4,19 @@ import axios from 'axios';
 import styles from './ReviewList.module.css';
 import ReviewForm from '../ReviewForm/ReviewForm';
 
-  const REVIEWS_URL = 'http://localhost:3000/reviews/';
-  const COMMENT_URL = 'http://localhost:3000/comments';
+  let REVIEWS_URL = '';
+    if (process.env.NODE_ENV !== 'production') {
+      REVIEWS_URL = 'http://localhost:3000/reviews/';
+    } else {
+      REVIEWS_URL = 'https://tymovie-server.herokuapp.com/reviews/';
+    }
 
+  let COMMENT_URL = '';
+    if (process.env.NODE_ENV !== 'production') {
+      COMMENT_URL = 'http://localhost:3000/comments/';
+    } else {
+      COMMENT_URL = 'https://tymovie-server.herokuapp.com/comments/';
+    }
 
   class ReviewList extends React.Component {
 
