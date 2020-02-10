@@ -41,7 +41,7 @@ class ReviewForm extends React.Component {
     console.log('token!', token)
     if (token !== null) {
 
-    axios.post(URL,
+    axios.post(URL_USER,
     // form data (becomes params in Rails)
     {
       name: this.state.name,
