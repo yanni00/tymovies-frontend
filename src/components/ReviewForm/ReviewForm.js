@@ -1,13 +1,13 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8bb1599e7028500637e424ddaed5c963a54f5cec
   import axios from 'axios';
   import React from 'react';
 
-
-
-  const URL = 'http://localhost:3000/reviews';
   let URL_USER = '';
     if (process.env.NODE_ENV !== 'production') {
-      URL_USER = 'http://localhost:3000/reviews/';
+      URL_USER = 'https://localhost:3000/reviews/';
     } else {
       URL_USER = 'https://tymovie-server.herokuapp.com/reviews/';
     }
