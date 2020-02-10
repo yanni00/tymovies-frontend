@@ -1,11 +1,6 @@
-
-
   import axios from 'axios';
   import React from 'react';
 
-
-
-  const URL = 'http://localhost:3000/reviews';
   let URL_USER = '';
     if (process.env.NODE_ENV !== 'production') {
       URL_USER = 'http://localhost:3000/reviews/';

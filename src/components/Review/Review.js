@@ -47,7 +47,7 @@ import ReviewForm from '../ReviewForm/ReviewForm';
       event.preventDefault()
       console.log('event', event.target.id);
       // console.log('review_id', review_id);
-      this.props.history.push('/');
+      // this.props.history.push('/');
 
     }
 
