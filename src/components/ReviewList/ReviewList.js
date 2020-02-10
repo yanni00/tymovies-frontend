@@ -57,7 +57,7 @@ import ReviewForm from '../ReviewForm/ReviewForm';
     addComment = (comment) => {
       console.log('in ReviewList:addComment(), got arg:', comment);
       this.getReviews();
-      
+
     }
 
     handleInput = (event) => {
@@ -143,7 +143,9 @@ import ReviewForm from '../ReviewForm/ReviewForm';
                   <input className={styles.inputButton} type="submit" value="Comment" />
 
                 </form>
+                
                 :
+
                 <button onClick={ () => this.setState({ visibleCommentForReviewId: review.id }) }>Add Comment</button>
               }
 

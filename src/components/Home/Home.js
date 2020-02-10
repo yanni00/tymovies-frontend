@@ -17,6 +17,7 @@
   import MovieShow from '../MovieShow/MovieShow';
   import TrendingMovies from '../TrendingMovies/TrendingMovies';
   import ReviewList from '../ReviewList/ReviewList';
+  import ReviewForm from '../ReviewForm/ReviewForm';
 
   import styles from './Home.module.css';
 

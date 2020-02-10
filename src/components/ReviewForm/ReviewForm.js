@@ -4,7 +4,8 @@
   import React from 'react';
 
 
-  // const URL = 'http://localhost:3000/reviews';
+
+  const URL = 'http://localhost:3000/reviews';
   let URL_USER = '';
     if (process.env.NODE_ENV !== 'production') {
       URL_USER = 'http://localhost:3000/reviews/';
@@ -26,6 +27,7 @@
 
   }
 
+
     handleInput = event => {
       this.setState({ name: event.target.value });
     }
@@ -42,7 +44,7 @@
 
       const token = localStorage.getItem('auth_token');
 
-      if (token === true) {
+      // if (token === true) {
 
       axios.post(URL,
       // form data (becomes params in Rails)
@@ -67,12 +69,11 @@
         console.warn( err );
       });
 
-    } else {
+    // } else {
 
-      console.log(this.props.history);
-      this.props.history.push('/login');
 
-      }
+      // this.props.history.push("/login");
+    // }
 
     }
 
@@ -83,17 +84,14 @@
           <h2>Add your review</h2>
 
           <form onSubmit={this.handleSubmit}>
-
           <input placeholder="Title" type="text" onChange={this.handleInput}/>
-
           <br/>
-
+          <br/>
           <textarea type="text" placeholder="Review" onChange={this.handleTextarea}/>
-
           <br/>
-
+          <br/>
           <input type="submit" value="Add review" />
-
+          <br/>
           </form>
         </div>
       );
