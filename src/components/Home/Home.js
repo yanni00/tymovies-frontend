@@ -17,7 +17,7 @@
   import MovieShow from '../MovieShow/MovieShow';
   import TrendingMovies from '../TrendingMovies/TrendingMovies';
   import ReviewList from '../ReviewList/ReviewList';
-  import CommentForm from '../CommentForm/CommentForm';
+
   import styles from './Home.module.css';
 
 
@@ -71,12 +71,13 @@
             <Route exact path="/search/:query" component={ Search }/>
             <Route exact path="/movies/:id" component={ MovieShow }/>
             <Route exact path="/login" render={(props) => <Login {...props} onLogin={this.setLoginStatus} /> } />
+            // <Route exact path="/login" component={ About } />
             <Route exact path="/registration" component={ Registration } />
             <Route exact path="/genres" component={ Genres } />
             <Route exact path="/genres/:id/:name" component={ GenreShow } />
             <Route exact path="/about" component={ About } />
             <Route exact path="/" component={ TrendingMovies }/>
-            <Route exact path="/commentstest" component={ CommentForm }/>
+
           </Router>
           <br/>
           <br/>

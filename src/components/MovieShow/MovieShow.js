@@ -40,10 +40,10 @@
               <img src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}/>
               <h1>{`Title: ${movie.original_title}`}</h1>
               <h3>{ `Overview: ${movie.overview}`}</h3>
-              <h3> Genres: { movie.genres.map(
+              <h3 className={styles.genreList}> Genres: { movie.genres.map(
                 (genre, key) => <li key={genre.id}>{genre.name}</li>
               )}
-              </h3>
+            </h3>
               <h3>{`Vote Average: ${movie.vote_average}`}</h3>
 
               <hr/>

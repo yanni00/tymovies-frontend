@@ -26,7 +26,7 @@ class Search extends React.Component {
 
     return (
       <div className={styles.container}>
-        <h3 className={styles.trendingMoviesHeader}>Trending This Week</h3>
+        <h2 className={styles.trendingMoviesHeader}>Trending This Week</h2>
 
         {
           this.state.movies.length >= 1

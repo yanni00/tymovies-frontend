@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import CommentForm from '../CommentForm/CommentForm';
+
 import styles from './ReviewList.module.css';
 import ReviewForm from '../ReviewForm/ReviewForm';
 
@@ -28,6 +28,11 @@ import ReviewForm from '../ReviewForm/ReviewForm';
 
     componentDidMount() {
 
+      this.getReviews();
+
+    }
+
+    getReviews() {
       const token = localStorage.getItem('auth_token');
 
       axios.get(REVIEWS_URL + this.props.movieId, {
@@ -45,12 +50,15 @@ import ReviewForm from '../ReviewForm/ReviewForm';
     }
 
     addReview = (review) => {
-      console.log('in ReviewList::addReview(), got arg:', review);
-      // this.state.reviews.push( review );
+      console.log('in ReviewList:addReview(), got arg:', review);
       this.setState({ reviews: [ review, ...this.state.reviews ] });
     }
 
-
+    addComment = (comment) => {
+      console.log('in ReviewList:addComment(), got arg:', comment);
+      this.getReviews();
+      
+    }
 
     handleInput = (event) => {
 
@@ -62,6 +70,8 @@ import ReviewForm from '../ReviewForm/ReviewForm';
     handleSubmit = (event) => {
       event.preventDefault()
       console.log('event', event.target.id);
+
+
 
       const comment = this.state.comment;
       const reviewId = this.state.visibleCommentForReviewId;
@@ -82,17 +92,12 @@ import ReviewForm from '../ReviewForm/ReviewForm';
       })
       .then( res => {
         console.log('comment response:', res.data);
+        this.addComment(res.data);
       })
       .catch( err => {
         console.warn( err );
       });
     }
-      // this.props.history.push('/');
-
-
-
-
-
 
     render(){
       return(

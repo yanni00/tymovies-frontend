@@ -24,16 +24,16 @@
 
     render(){
       return(
-        <div >
+        <div className={styles.main}>
 
           {
             this.state.genres.length >= 1
             ?
-            <ul >
+            <ul className={styles.text}>
               {
 
                 this.state.genres.map( genre => (
-                <li className={styles.text}>
+                <li >
                   <Link to={`/genres/${genre.id}/${genre.name}`} key={genre.id}>
                   {genre.name}
 
