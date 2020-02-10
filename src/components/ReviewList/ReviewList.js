@@ -18,6 +18,11 @@ import ReviewForm from '../ReviewForm/ReviewForm';
 
     componentDidMount() {
 
+      this.getReviews();
+
+    }
+
+    getReviews() {
       const token = localStorage.getItem('auth_token');
 
       axios.get(REVIEWS_URL + this.props.movieId, {
@@ -41,7 +46,8 @@ import ReviewForm from '../ReviewForm/ReviewForm';
 
     addComment = (comment) => {
       console.log('in ReviewList:addComment(), got arg:', comment);
-      // this.setState({ comment:  });
+      this.getReviews();
+      
     }
 
     handleInput = (event) => {
