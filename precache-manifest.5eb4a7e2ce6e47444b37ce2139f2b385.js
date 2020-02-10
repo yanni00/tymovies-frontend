@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "66aeab0a1faa3887e3dd2a8683ad5f19",
+    "revision": "ab458d023058a797ca3f058b758531fd",
     "url": "/tymovies-frontend/index.html"
   },
   {
-    "revision": "f7b2324964508d9e5daa",
+    "revision": "9ff042b68841b1404f16",
     "url": "/tymovies-frontend/static/css/main.6f7a8021.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/tymovies-frontend/static/js/2.b3b3d853.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f7b2324964508d9e5daa",
-    "url": "/tymovies-frontend/static/js/main.9c0d4c5b.chunk.js"
+    "revision": "9ff042b68841b1404f16",
+    "url": "/tymovies-frontend/static/js/main.e4a192ac.chunk.js"
   },
   {
     "revision": "eee990913832a408d81c",
