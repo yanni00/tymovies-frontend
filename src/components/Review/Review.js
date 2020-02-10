@@ -4,7 +4,6 @@ import styles from './Review.module.css';
 import ReviewForm from '../ReviewForm/ReviewForm';
 
 
-  // const URL = 'http://localhost:3000/reviews/';
   let URL_USER = '';
     if (process.env.NODE_ENV !== 'production') {
       URL_USER = 'http://localhost:3000/reviews/';
