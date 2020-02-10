@@ -3,7 +3,7 @@
 
   let URL_USER = '';
     if (process.env.NODE_ENV !== 'production') {
-      URL_USER = 'https://localhost:3000/reviews/';
+      URL_USER = 'http://localhost:3000/reviews/';
     } else {
       URL_USER = 'https://tymovie-server.herokuapp.com/reviews/';
     }
