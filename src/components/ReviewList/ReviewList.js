@@ -113,12 +113,14 @@ import ReviewForm from '../ReviewForm/ReviewForm';
           <h2>Reviews</h2>
           {this.state.reviews.map( review => (
             <div key={review.id} style={{border: '1px solid grey', padding: '60px', width: '60%' }} >
-              <h4>{review.name}</h4>
-              <p>{review.userReview}</p>
-              <h4>{review.user.name}</h4>
-              {
+              <h3>{review.name}</h3>
+              <h3>{review.userReview}</h3>
+              <p>{review.user.name}</p>
+              <p>
+                {
                 new Date(review.created_at).toLocaleDateString("en-AU", { hour: 'numeric', minute: 'numeric',  weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})
-              }
+                }
+              </p>
                 <br/>
                 <br/>
 
@@ -126,11 +128,13 @@ import ReviewForm from '../ReviewForm/ReviewForm';
                 review.comments.map( comment => (
                   <div  className={styles.comment} key={comment.id} style={{border: '1px solid grey', padding: '30px', width: '60%'}}>
                     <h2>Comments</h2>
-                    <h4>{ comment.body }</h4>
-                    <h4>{ comment.user.name }</h4>
+                    <h3>{ comment.body }</h3>
+                    <p>{ comment.user.name }</p>
+                    <p>
                       {
                         new Date(review.created_at).toLocaleDateString("en-AU", { hour: 'numeric', minute: 'numeric',  weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})
                       }
+                    </p>
                   </div>
                 ))
               }
