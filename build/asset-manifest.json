@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/tymovies-frontend/static/css/main.d54e30c0.chunk.css",
-    "main.js": "/tymovies-frontend/static/js/main.67ea04d7.chunk.js",
-    "main.js.map": "/tymovies-frontend/static/js/main.67ea04d7.chunk.js.map",
+    "main.js": "/tymovies-frontend/static/js/main.80ed92e9.chunk.js",
+    "main.js.map": "/tymovies-frontend/static/js/main.80ed92e9.chunk.js.map",
     "runtime-main.js": "/tymovies-frontend/static/js/runtime-main.27304447.js",
     "runtime-main.js.map": "/tymovies-frontend/static/js/runtime-main.27304447.js.map",
     "static/js/2.de580f3d.chunk.js": "/tymovies-frontend/static/js/2.de580f3d.chunk.js",
     "static/js/2.de580f3d.chunk.js.map": "/tymovies-frontend/static/js/2.de580f3d.chunk.js.map",
     "index.html": "/tymovies-frontend/index.html",
-    "precache-manifest.ade4e62e1e432744427ee2438137623f.js": "/tymovies-frontend/precache-manifest.ade4e62e1e432744427ee2438137623f.js",
+    "precache-manifest.5505e012070cda0b7d4fe529e7cbdcbc.js": "/tymovies-frontend/precache-manifest.5505e012070cda0b7d4fe529e7cbdcbc.js",
     "service-worker.js": "/tymovies-frontend/service-worker.js",
     "static/css/main.d54e30c0.chunk.css.map": "/tymovies-frontend/static/css/main.d54e30c0.chunk.css.map",
     "static/js/2.de580f3d.chunk.js.LICENSE.txt": "/tymovies-frontend/static/js/2.de580f3d.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.27304447.js",
     "static/js/2.de580f3d.chunk.js",
     "static/css/main.d54e30c0.chunk.css",
-    "static/js/main.67ea04d7.chunk.js"
+    "static/js/main.80ed92e9.chunk.js"
   ]
 }
