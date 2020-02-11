@@ -93,6 +93,8 @@ import ReviewForm from '../ReviewForm/ReviewForm';
       .then( res => {
         console.log('comment response:', res.data);
         this.addComment(res.data);
+        // Close the comment text box
+        this.setState({ visibleCommentForReviewId: null })
       })
       .catch( err => {
         console.warn( err );
@@ -110,7 +112,7 @@ import ReviewForm from '../ReviewForm/ReviewForm';
 
           <h2>Reviews</h2>
           {this.state.reviews.map( review => (
-            <div key={review.id} style={{border: '1px solid grey', padding: '20px', width: '60%' }} >
+            <div key={review.id} style={{border: '1px solid grey', padding: '60px', width: '60%' }} >
               <h4>{review.name}</h4>
               <p>{review.userReview}</p>
               <h4>{review.user.name}</h4>
@@ -122,7 +124,7 @@ import ReviewForm from '../ReviewForm/ReviewForm';
 
               {
                 review.comments.map( comment => (
-                  <div key={comment.id} style={{border: '1px solid grey', padding: '20px', width: '60%'}}>
+                  <div  className={styles.comment} key={comment.id} style={{border: '1px solid grey', padding: '30px', width: '60%'}}>
                     <h2>Comments</h2>
                     <h4>{ comment.body }</h4>
                     <h4>{ comment.user.name }</h4>
@@ -143,10 +145,10 @@ import ReviewForm from '../ReviewForm/ReviewForm';
                   <input className={styles.inputButton} type="submit" value="Comment" />
 
                 </form>
-                
+
                 :
 
-                <button onClick={ () => this.setState({ visibleCommentForReviewId: review.id }) }>Add Comment</button>
+                <button className={styles.button} onClick={ () => this.setState({ visibleCommentForReviewId: review.id }) }>Add Comment</button>
               }
 
             </div>

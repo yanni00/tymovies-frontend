@@ -70,13 +70,13 @@ class Login extends Component {
       <div className={styles.loginBoxBorder}>
         <form onSubmit={this.handleSubmit}>
           <br></br>
-          <input type="text" placeholder="Email" onChange={this.handleEmail} />
+          <input className={styles.email} type="text" placeholder="Email" onChange={this.handleEmail} />
           <br></br>
           <br></br>
-          <input type="password" placeholder="Password" onChange={this.handlePassword}  />
+          <input className={styles.password} type="password" placeholder="Password" onChange={this.handlePassword}  />
           <br></br>
           <br></br>
-          <input type="submit" value="Login"/>
+          <input className={styles.button} type="submit" value="Login"/>
           <br></br>
           <br></br>
         </form>

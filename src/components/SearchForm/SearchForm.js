@@ -25,8 +25,8 @@
         <div>
 
         <form className={styles.form} onSubmit={this.handleSubmit}>
-          <input type="text" onChange={this.handleInput}/>
-          <input className={styles.inputButton} type="submit" value="Search Movies" />
+          <input className={styles.searchBar} type="text" onChange={this.handleInput}/>
+          <input className={styles.button} type="submit" value="Search Movies" />
         </form>
 
 

@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import styles from './Review.module.css';
 import ReviewForm from '../ReviewForm/ReviewForm';
+import styles from '../Review.module.css';
+
 
 
   let URL_USER = '';
@@ -54,7 +56,7 @@ import ReviewForm from '../ReviewForm/ReviewForm';
 
     render(){
       return(
-        <div>
+        <div className={styles.reviewForm}>
 
           <ReviewForm
             movieId={this.props.movieId}
@@ -62,13 +64,14 @@ import ReviewForm from '../ReviewForm/ReviewForm';
             />
 
           <h2>Reviews</h2>
+          <div className={styles.reviewText}>
           {this.state.reviews.map( review => (
             <div key={review.id}>
               <h4>{review.name}</h4>
               <p>{review.userReview}</p>
 
               <h4>{review.user.name}</h4>
-
+              </div>
               <form
                 id={review.id} className={styles.form} onSubmit={this.handleSubmit}>
                   <textarea rows="12" cols="55" type="text" id={review.id} onChange={this.handleInput}/>
