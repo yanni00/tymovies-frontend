@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/tymovies-frontend/static/css/main.6f7a8021.chunk.css",
-    "main.js": "/tymovies-frontend/static/js/main.98b6e7e3.chunk.js",
-    "main.js.map": "/tymovies-frontend/static/js/main.98b6e7e3.chunk.js.map",
+    "main.css": "/tymovies-frontend/static/css/main.d54e30c0.chunk.css",
+    "main.js": "/tymovies-frontend/static/js/main.80ed92e9.chunk.js",
+    "main.js.map": "/tymovies-frontend/static/js/main.80ed92e9.chunk.js.map",
     "runtime-main.js": "/tymovies-frontend/static/js/runtime-main.27304447.js",
     "runtime-main.js.map": "/tymovies-frontend/static/js/runtime-main.27304447.js.map",
-    "static/js/2.b3b3d853.chunk.js": "/tymovies-frontend/static/js/2.b3b3d853.chunk.js",
-    "static/js/2.b3b3d853.chunk.js.map": "/tymovies-frontend/static/js/2.b3b3d853.chunk.js.map",
+    "static/js/2.de580f3d.chunk.js": "/tymovies-frontend/static/js/2.de580f3d.chunk.js",
+    "static/js/2.de580f3d.chunk.js.map": "/tymovies-frontend/static/js/2.de580f3d.chunk.js.map",
     "index.html": "/tymovies-frontend/index.html",
-    "precache-manifest.df0a2c2fe4a9cc264a8f3db87a0594e0.js": "/tymovies-frontend/precache-manifest.df0a2c2fe4a9cc264a8f3db87a0594e0.js",
+    "precache-manifest.5505e012070cda0b7d4fe529e7cbdcbc.js": "/tymovies-frontend/precache-manifest.5505e012070cda0b7d4fe529e7cbdcbc.js",
     "service-worker.js": "/tymovies-frontend/service-worker.js",
-    "static/css/main.6f7a8021.chunk.css.map": "/tymovies-frontend/static/css/main.6f7a8021.chunk.css.map",
-    "static/js/2.b3b3d853.chunk.js.LICENSE.txt": "/tymovies-frontend/static/js/2.b3b3d853.chunk.js.LICENSE.txt"
+    "static/css/main.d54e30c0.chunk.css.map": "/tymovies-frontend/static/css/main.d54e30c0.chunk.css.map",
+    "static/js/2.de580f3d.chunk.js.LICENSE.txt": "/tymovies-frontend/static/js/2.de580f3d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.27304447.js",
-    "static/js/2.b3b3d853.chunk.js",
-    "static/css/main.6f7a8021.chunk.css",
-    "static/js/main.98b6e7e3.chunk.js"
+    "static/js/2.de580f3d.chunk.js",
+    "static/css/main.d54e30c0.chunk.css",
+    "static/js/main.80ed92e9.chunk.js"
   ]
 }
