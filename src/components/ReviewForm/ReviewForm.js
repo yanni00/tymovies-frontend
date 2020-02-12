@@ -78,10 +78,10 @@ class ReviewForm extends React.Component {
         <h2>Add your review</h2>
 
         <form onSubmit={this.handleSubmit}>
-        <input placeholder="Title" type="text" onChange={this.handleInput}/>
+        <input className={styles.title} placeholder="Title" type="text" onChange={this.handleInput}/>
         <br/>
         <br/>
-        <textarea type="text" placeholder="Review" onChange={this.handleTextarea}/>
+        <textarea className={styles.text} type="text" placeholder="Review" onChange={this.handleTextarea}/>
         <br/>
         <br/>
         <input className={styles.button} type="submit" value="Add review" />

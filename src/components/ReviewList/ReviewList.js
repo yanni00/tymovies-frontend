@@ -145,10 +145,10 @@ import ReviewForm from '../ReviewForm/ReviewForm';
                 ?
               <form
                 id={review.id} className={styles.form} onSubmit={this.handleSubmit}>
-                  <textarea rows="10" cols="35" type="text" id={review.id} onChange={this.handleInput}/>
-                  <br/>
+                  <textarea className={styles.textarea} rows="10" cols="35" type="text" id={review.id} onChange={this.handleInput}/>
+                  <br/><br/>
                   <input className={styles.inputButton} type="submit" value="Comment" />
-
+              
                 </form>
 
                 :
