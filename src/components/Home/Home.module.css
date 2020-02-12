@@ -31,7 +31,9 @@ a, a:active, a:hover{
 .nav {
   margin-left: 2vw;
 }
-
+.field_with_errors input {
+  border: 3px solid red;
+}
 img {
 
 }
@@ -42,7 +44,7 @@ footer {
   left: 0px;
   bottom: 0px;
   width: 100%;
-  
+
 
   text-align: center;
   background-image: linear-gradient(180deg, #0a0a0a, #777B7E);

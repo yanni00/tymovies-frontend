@@ -21,6 +21,10 @@
   box-shadow: 10px 10px 20px grey;
 }
 
+.field_with_errors input {
+  border: 3px solid red;
+}
+
 .searchBar {
   padding: 4px;
   margin-top: 8px;
