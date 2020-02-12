@@ -3,7 +3,7 @@
   import {
   Route,
   Link,
-  BrowserRouter as Router
+  HashRouter as Router
   } from 'react-router-dom';
   import Login from '../Login/Login';
 
