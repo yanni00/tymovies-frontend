@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React from 'react';
+import styles from './ReviewForm.module.css';
 
 let URL_USER = '';
   if (process.env.NODE_ENV !== 'production') {
@@ -83,7 +84,7 @@ class ReviewForm extends React.Component {
         <textarea type="text" placeholder="Review" onChange={this.handleTextarea}/>
         <br/>
         <br/>
-        <input type="submit" value="Add review" />
+        <input className={styles.button} type="submit" value="Add review" />
         <br/>
         </form>
       </div>
