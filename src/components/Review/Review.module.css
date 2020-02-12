@@ -1,6 +1,5 @@
-
-.text {
-  color: white;
+.reviewText {
+  margin-left: 20px;
 }
 
 .field_with_errors input {

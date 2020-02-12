@@ -72,10 +72,17 @@ class Search extends React.Component {
           <ul className={styles.ul}>
           {
             this.state.movies.map( movie =>   (
+<<<<<<< HEAD
                <li className={styles.li} key={movie.id}>
                <Link className={styles.link} to={`/movies/${movie.id}`}>
                <img className={styles.img} src={`https://image.tmdb.org/t/p/w185/${movie.poster_path}`}/>
 
+=======
+               <li key={movie.id}>
+               <Link to={`/movies/${movie.id}`}>
+                 <img src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}/>
+               {movie.title} ({movie.release_date})
+>>>>>>> 39b80dfc9d1716ee9d20905b622d3ca81176a508
                </Link>
                </li>
 
