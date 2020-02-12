@@ -1,5 +1,5 @@
 
-html {
-  width: 100%;
-  background-image: linear-gradient(-180deg, #000000, #777B7E);    
+.text {
+  color: white;
+  margin-left: 10px;
 }
