@@ -32,11 +32,11 @@
       const movie = this.state.movie;
 
       return (
-        <div className={styles.text}>
+        <div className={styles.container}>
           {
             movie.id
             ?
-            <div>
+            <div className={styles.content}>
               <img src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}/>
               <h1>{`Title: ${movie.original_title}`}</h1>
               <h3>{ `Overview: ${movie.overview}`}</h3>
@@ -45,7 +45,7 @@
               )}
             </h3>
               <h3>{`Vote Average: ${movie.vote_average}`}</h3>
-
+              
               <hr/>
               <ReviewList
                 movieId={ movie.id }

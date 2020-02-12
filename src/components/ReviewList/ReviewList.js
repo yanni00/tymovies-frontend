@@ -111,6 +111,7 @@ import ReviewForm from '../ReviewForm/ReviewForm';
             />
 
           <h2>Reviews</h2>
+          <br/>
           {this.state.reviews.map( review => (
             <div key={review.id} style={{border: '1px solid grey', padding: '60px', width: '60%' }} >
               <h3>{review.name}</h3>

@@ -1,14 +1,12 @@
-.text {
+.container {
   color: white;
 }
 
-div {
-  margin-left: 10px;
+.content {
   margin-top: 20px;
 }
 
 .genreList {
   list-style-type: none;
   padding: 0%;
-
 }
