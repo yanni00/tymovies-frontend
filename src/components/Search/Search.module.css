@@ -1,3 +1,30 @@
+
+.ul {
+  margin: 0 auto;
+  min-width: 696px;
+  list-style: none;
+  padding-top: 20px;
+  width: 80%;
+}
+
+
+.li {
+  display:inline;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3vw;
+  color: white;
+
+}
+
+.p {
+  text-align: center;
+  margin-top: 3vw;
+}
+
 .field_with_errors input {
   border: 3px solid red;
+
 }

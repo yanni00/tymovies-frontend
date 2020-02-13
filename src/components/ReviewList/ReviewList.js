@@ -92,13 +92,18 @@ import ReviewForm from '../ReviewForm/ReviewForm';
       })
       .then( res => {
         console.log('comment response:', res.data);
+        if( comment.length !== 0 ){
         this.addComment(res.data);
-        // Close the comment text box
-        this.setState({ visibleCommentForReviewId: null })
+
+          this.setState({ visibleCommentForReviewId: null })
+        } else {
+          console.log('Please comment')
+        }
       })
       .catch( err => {
         console.warn( err );
       });
+
     }
 
     render(){
@@ -111,6 +116,7 @@ import ReviewForm from '../ReviewForm/ReviewForm';
             />
 
           <h2>Reviews</h2>
+          <br/>
           {this.state.reviews.map( review => (
             <div key={review.id} style={{border: '1px solid grey', padding: '60px', width: '60%' }} >
               <h3>{review.name}</h3>
@@ -123,11 +129,12 @@ import ReviewForm from '../ReviewForm/ReviewForm';
               </p>
                 <br/>
                 <br/>
-
+                <h2>Comments</h2>
+                <br/>
               {
                 review.comments.map( comment => (
                   <div  className={styles.comment} key={comment.id} style={{border: '1px solid grey', padding: '30px', width: '60%'}}>
-                    <h2>Comments</h2>
+
                     <h3>{ comment.body }</h3>
                     <p>{ comment.user.name }</p>
                     <p>
@@ -144,8 +151,8 @@ import ReviewForm from '../ReviewForm/ReviewForm';
                 ?
               <form
                 id={review.id} className={styles.form} onSubmit={this.handleSubmit}>
-                  <textarea rows="10" cols="35" type="text" id={review.id} onChange={this.handleInput}/>
-                  <br/>
+                  <textarea className={styles.textarea} rows="10" cols="35" type="text" id={review.id} onChange={this.handleInput}/>
+                  <br/><br/>
                   <input className={styles.inputButton} type="submit" value="Comment" />
 
                 </form>

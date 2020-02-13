@@ -4,7 +4,8 @@
   text-align: center;
   padding: 1px 0px 3px 0px;
   border-radius: 5px;
-  margin-left: 37vw;
+  margin: 0 auto;
+  margin-top: 2rem;
 }
 
 .button {
@@ -16,30 +17,35 @@
   border-radius: 10px;
   padding: 10px;
   border: 1px solid grey;
-  box-shadow: 5px 5px 10px grey;
+  box-shadow: 5px 5px 10px rgb(54, 55, 52);
   cursor: pointer;
+  font-size: 15px;
 }
 
 .button:hover {
   font-weight: bold;
-  box-shadow: 10px 10px 20px grey;
+  box-shadow: 10px 10px 20px rgb(54, 55, 52);
 }
 
 .email {
   font-size: 15px;
   margin-top: 15px;
+  border-radius: 1px;
 }
 
 .userName {
   font-size: 15px;
+  border-radius: 1px;
 }
 
 .password {
   font-size: 15px;
+  border-radius: 1px;
 }
 
 .comfiredPassword {
   font-size: 15px;
+  border-radius: 1px;
 }
 
 .field_with_errors input {

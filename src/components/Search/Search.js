@@ -62,20 +62,22 @@ class Search extends React.Component {
   render(){
 
     return (
-      <div>
-        <h3>Movie Results for {this.props.match.params.query}</h3>
+      <div className={styles.container}>
+        <h2 className={styles.header}>Movie results for {this.props.match.params.query}</h2>
 
         {
           this.state.movies.length >= 1
           ?
 
-          <ul>
+          <ul className={styles.ul}>
           {
             this.state.movies.map( movie =>   (
-               <li key={movie.id}>
-               <Link to={`/movies/${movie.id}`}>
-                 <img src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}/>
-               {movie.title} ({movie.release_date})
+
+               <li className={styles.li} key={movie.id}>
+               <Link className={styles.link} to={`/movies/${movie.id}`}>
+               <img className={styles.img} src={`https://image.tmdb.org/t/p/w185/${movie.poster_path}`}/>
+
+
                </Link>
                </li>
 
@@ -83,7 +85,7 @@ class Search extends React.Component {
           }
           </ul>
           :
-          <p>Loading...Please wait</p>
+          <p className={styles.p}>Loading...Please wait</p>
         }
 
 
