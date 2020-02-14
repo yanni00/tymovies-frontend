@@ -41,8 +41,9 @@ import ReviewForm from '../ReviewForm/ReviewForm';
         }
       })
       .then( res => {
-        console.log('response:', res.data);
-        this.setState({reviews: res.data})
+        console.log('reviews:', res.data);
+        const reviews = res.data;
+        this.setState({reviews});
       })
       .catch( err => {
         console.warn( err );
@@ -95,7 +96,7 @@ import ReviewForm from '../ReviewForm/ReviewForm';
         if( comment.length !== 0 ){
         this.addComment(res.data);
 
-          this.setState({ visibleCommentForReviewId: null })
+          this.setState({ visibleCommentForReviewId: null, comment: '' })
         } else {
           console.log('Please comment')
         }
@@ -118,7 +119,7 @@ import ReviewForm from '../ReviewForm/ReviewForm';
           <h2>Reviews</h2>
           <br/>
           {this.state.reviews.map( review => (
-            <div key={review.id} style={{border: '1px solid grey', padding: '60px', width: '60%' }} >
+            <div className={styles.review} key={review.id} style={{border: '1px solid grey', padding: '60px', width: '60%' }} >
               <h3>{review.name}</h3>
               <h3>{review.userReview}</h3>
               <p>{review.user.name}</p>
@@ -136,10 +137,11 @@ import ReviewForm from '../ReviewForm/ReviewForm';
                   <div  className={styles.comment} key={comment.id} style={{border: '1px solid grey', padding: '30px', width: '60%'}}>
 
                     <h3>{ comment.body }</h3>
-                    <p>{ comment.user.name }</p>
+                    <p>{ comment.user.name
+                      }</p>
                     <p>
                       {
-                        new Date(review.created_at).toLocaleDateString("en-AU", { hour: 'numeric', minute: 'numeric',  weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})
+                        new Date(comment.created_at).toLocaleDateString("en-AU", { hour: 'numeric', minute: 'numeric',  weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})
                       }
                     </p>
                   </div>
@@ -151,7 +153,7 @@ import ReviewForm from '../ReviewForm/ReviewForm';
                 ?
               <form
                 id={review.id} className={styles.form} onSubmit={this.handleSubmit}>
-                  <textarea className={styles.textarea} rows="10" cols="35" type="text" id={review.id} onChange={this.handleInput}/>
+                  <textarea className={styles.textarea} rows="10" cols="35" type="text" onChange={this.handleInput}/>
                   <br/><br/>
                   <input className={styles.inputButton} type="submit" value="Comment" />
 
@@ -159,7 +161,7 @@ import ReviewForm from '../ReviewForm/ReviewForm';
 
                 :
 
-                <button className={styles.button} onClick={ () => this.setState({ visibleCommentForReviewId: review.id }) }>Add Comment</button>
+                <button className={styles.button} onClick={ (e) => {  e.preventDefault(); this.setState({ visibleCommentForReviewId: review.id }) } }>Add Comment</button>
               }
 
             </div>
