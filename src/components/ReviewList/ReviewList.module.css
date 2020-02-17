@@ -1,3 +1,28 @@
+.form{
+  margin-top: 30px;
+
+}
+
+.inputButton {
+  width: 125px;
+  max-width: 80%;
+  margin: 0 auto 20px;
+  background-color: orange;
+  color:black;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid grey;
+  box-shadow: 5px 5px 10px rgb(54, 55, 52);
+  cursor: pointer;
+  font-size: 15px;
+  margin-top: 2rem;
+}
+
+.inputButton:hover {
+  font-weight: bold;
+  box-shadow: 10px 10px 20px rgb(54, 55, 52);
+}
+
 .button {
   width: 125px;
   max-width: 80%;
@@ -10,7 +35,7 @@
   box-shadow: 5px 5px 10px rgb(54, 55, 52);
   cursor: pointer;
   font-size: 15px;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .textarea{
@@ -25,4 +50,12 @@
 
 .field_with_errors input {
   border: 3px solid red;
+}
+
+.comment {
+  margin-bottom: 30px;
+}
+
+.review {
+  margin-bottom: 30px;
 }
