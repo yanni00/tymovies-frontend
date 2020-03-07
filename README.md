@@ -16,6 +16,9 @@ pry-byebug
 rails 5.2.4
 ruby 2.4.1
 
+# Screenshot
+![](src/s1.png)
+
 # Getting Started
 
 install packages in tymoviedb-frontend
