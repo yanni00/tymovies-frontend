@@ -41,3 +41,9 @@
   font-size: 15px;
   border-radius: 1px;
 }
+
+@media only screen and (max-width: 600px) {
+  .loginBoxBorder {
+    width: auto;
+  }
+}

@@ -37,7 +37,9 @@
             movie.id
             ?
             <div className={styles.content}>
-              <img src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}/>
+              <div className={styles.movieImgBox}>
+                <img className={styles.movieImg} src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}/>
+              </div>
               <h1>{`Title: ${movie.original_title}`}</h1>
               <h3>{ `Overview: ${movie.overview}`}</h3>
               <h3 className={styles.genreList}> Genres: { movie.genres.map(
@@ -45,7 +47,7 @@
               )}
             </h3>
               <h3>{`Vote Average: ${movie.vote_average}`}</h3>
-              
+
               <hr/>
               <ReviewList
                 movieId={ movie.id }

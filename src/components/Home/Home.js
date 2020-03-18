@@ -59,11 +59,12 @@
                   :
                   <Link className={styles.login}to="/login">Login</Link>
                 }
-                 
-              <Link className={styles.signUp}to="/registration">Sign Up</Link> 
-              <Link className={styles.home} to="/">Home</Link> 
-              <Link className={styles.genres}to="/genres">Genres</Link> 
-              <Link className={styles.about}to="/about">About Us</Link> 
+
+              <Link className={styles.signUp}to="/registration">Sign Up</Link>
+              <br className={styles.lineBreak}/>
+              <Link className={styles.home} to="/">Home</Link>
+              <Link className={styles.genres}to="/genres">Genres</Link>
+              <Link className={styles.about}to="/about">About Us</Link>
             </nav>
 
             <Route path="/" component={ SearchForm }/>
