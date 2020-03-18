@@ -1,7 +1,7 @@
 # TYMovies-DB
 TYMovies-DB front end application made using The Movie Database API. Built with react.
 Not endorsed or certified from TMDb.
-Try it out here: https://tymovie-db.herokuapp.com/
+Try it out here: https://yanni00.github.io/tymovies-frontend/#/
 
 Some of the stuff used:
 
